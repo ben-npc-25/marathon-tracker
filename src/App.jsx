@@ -44,7 +44,8 @@ import {
   Copy,
   Check,
   Mail,
-  Lock
+  Lock,
+  Menu
 } from 'lucide-react';
 
 // --- Configuration & Initialization ---
@@ -414,6 +415,7 @@ export default function App() {
   const [isEditingTitle, setIsEditingTitle] = useState(false);
   const [editedTitle, setEditedTitle] = useState('');
   const [isAdjusting, setIsAdjusting] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   // Auth
   useEffect(() => {
@@ -726,8 +728,20 @@ export default function App() {
   return (
     <div className="flex h-screen bg-gray-50 font-sans overflow-hidden">
 
+      {/* Mobile Backdrop */}
+      {isSidebarOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
+          onClick={() => setIsSidebarOpen(false)}
+        />
+      )}
+
       {/* Sidebar */}
-      <div className="w-64 bg-white border-r border-gray-200 flex flex-col">
+      <div className={`
+        fixed inset-y-0 left-0 z-50 w-64 bg-white border-r border-gray-200 flex flex-col transition-transform duration-300 ease-in-out
+        md:relative md:translate-x-0
+        ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}
+      `}>
         <div className="p-4 border-b border-gray-100 flex items-center gap-2 text-indigo-600">
           <Activity className="w-6 h-6 flex-shrink-0" />
           <h1 className="text-lg font-black tracking-tight text-gray-900 leading-tight">RUNNER'S LOG</h1>
@@ -796,6 +810,9 @@ export default function App() {
             {/* Header */}
             <div className="bg-white border-b border-gray-200 p-4 flex justify-between items-center shadow-sm z-20">
               <div className="flex items-center gap-3 overflow-hidden">
+                <button onClick={() => setIsSidebarOpen(true)} className="md:hidden p-1 text-gray-500 hover:bg-gray-100 rounded">
+                  <Menu className="w-6 h-6" />
+                </button>
                 {isEditingTitle ? (
                   <div className="flex items-center gap-2">
                     <input
