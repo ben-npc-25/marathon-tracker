@@ -870,7 +870,13 @@ export default function App() {
             </div>
           </>
         ) : (
-          <div className="flex-1 flex flex-col items-center justify-center text-gray-400">
+          <div className="relative flex-1 flex flex-col items-center justify-center text-gray-400">
+            <button
+              onClick={() => setIsSidebarOpen(true)}
+              className="absolute top-4 left-4 md:hidden p-2 text-gray-600 hover:bg-gray-100 rounded-lg"
+            >
+              <Menu className="w-6 h-6" />
+            </button>
             <Activity className="w-16 h-16 mb-4 opacity-20" />
             <p>Select a plan or create a new one.</p>
             <button onClick={() => setShowCreateModal(true)} className="mt-4 px-6 py-2 bg-indigo-600 text-white rounded-lg font-bold hover:bg-indigo-700">
