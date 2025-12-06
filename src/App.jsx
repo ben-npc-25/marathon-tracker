@@ -114,7 +114,7 @@ const generateTrainingPlan = async (goal, startDate, raceDate, existingLog = [],
   if (!isAdjustment) {
     systemPrompt = `You are a world-class running coach. Create a training plan for a user targeting a race on ${raceDate}. The plan starts on ${startDate}. 
     Generate the daily schedule ONLY from ${startDate} to ${generationEndDateStr}. 
-    The output must be a JSON array.`;
+    The output must be a JSON array and using metrics system (km).`;
     prompt = `Goal: ${goal}. Race Date: ${raceDate}. Start Date: ${startDate}. Generate the first phase of the plan.`;
   } else {
     const logSummary = existingLog.map(log =>
