@@ -681,10 +681,12 @@ export default function App() {
             const isRaceDay = date === currentPlan.raceDate;
             const isToday = date === dateToISO(new Date());
             const isCompleted = log && log.actualDistance && parseFloat(log.actualDistance) > 0;
+            const isRest = log && log.plannedActivity && log.plannedActivity.toLowerCase().includes('rest');
 
             let bgClass = "bg-white";
             if (isRaceDay) bgClass = "bg-yellow-100 border-yellow-400 ring-2 ring-yellow-400";
             else if (isCompleted) bgClass = "bg-green-50 border-green-200";
+            else if (isRest) bgClass = "bg-gray-100 text-gray-400";
             else if (isToday) bgClass = "bg-blue-50 border-blue-300";
             else if (!log) bgClass = "bg-gray-50 opacity-60"; // Future/Empty
 
@@ -704,7 +706,7 @@ export default function App() {
 
                 <div className="mt-1">
                   {log ? (
-                    <p className="text-xs font-semibold text-gray-800 line-clamp-3">{log.plannedActivity}</p>
+                    <p className={`text-xs font-semibold line-clamp-3 ${isRest ? 'text-gray-400' : 'text-gray-800'}`}>{log.plannedActivity}</p>
                   ) : (
                     isRaceDay ? <p className="text-xs font-black text-yellow-800">RACE DAY!</p> : <p className="text-[10px] text-gray-400 italic">Rest / TBD</p>
                   )}
