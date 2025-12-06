@@ -114,7 +114,7 @@ const generateTrainingPlan = async (goal, startDate, raceDate, existingLog = [],
   if (!isAdjustment) {
     systemPrompt = `You are a world-class running coach. Create a training plan for a user targeting a race on ${raceDate}. The plan starts on ${startDate}. 
     Generate the daily schedule ONLY from ${startDate} to ${generationEndDateStr}. 
-    The output must be a JSON array.`;
+    The output must be a JSON array and using metrics system (km).`;
     prompt = `Goal: ${goal}. Race Date: ${raceDate}. Start Date: ${startDate}. Generate the first phase of the plan.`;
   } else {
     const logSummary = existingLog.map(log =>
@@ -681,10 +681,12 @@ export default function App() {
             const isRaceDay = date === currentPlan.raceDate;
             const isToday = date === dateToISO(new Date());
             const isCompleted = log && log.actualDistance && parseFloat(log.actualDistance) > 0;
+            const isRest = log && log.plannedActivity && log.plannedActivity.toLowerCase().includes('rest');
 
             let bgClass = "bg-white";
             if (isRaceDay) bgClass = "bg-yellow-100 border-yellow-400 ring-2 ring-yellow-400";
             else if (isCompleted) bgClass = "bg-green-50 border-green-200";
+            else if (isRest) bgClass = "bg-gray-100 text-gray-400";
             else if (isToday) bgClass = "bg-blue-50 border-blue-300";
             else if (!log) bgClass = "bg-gray-50 opacity-60"; // Future/Empty
 
@@ -704,7 +706,7 @@ export default function App() {
 
                 <div className="mt-1">
                   {log ? (
-                    <p className="text-xs font-semibold text-gray-800 line-clamp-3">{log.plannedActivity}</p>
+                    <p className={`text-xs font-semibold line-clamp-3 ${isRest ? 'text-gray-400' : 'text-gray-800'}`}>{log.plannedActivity}</p>
                   ) : (
                     isRaceDay ? <p className="text-xs font-black text-yellow-800">RACE DAY!</p> : <p className="text-[10px] text-gray-400 italic">Rest / TBD</p>
                   )}
@@ -870,7 +872,13 @@ export default function App() {
             </div>
           </>
         ) : (
-          <div className="flex-1 flex flex-col items-center justify-center text-gray-400">
+          <div className="relative flex-1 flex flex-col items-center justify-center text-gray-400">
+            <button
+              onClick={() => setIsSidebarOpen(true)}
+              className="absolute top-4 left-4 md:hidden p-2 text-gray-600 hover:bg-gray-100 rounded-lg"
+            >
+              <Menu className="w-6 h-6" />
+            </button>
             <Activity className="w-16 h-16 mb-4 opacity-20" />
             <p>Select a plan or create a new one.</p>
             <button onClick={() => setShowCreateModal(true)} className="mt-4 px-6 py-2 bg-indigo-600 text-white rounded-lg font-bold hover:bg-indigo-700">
