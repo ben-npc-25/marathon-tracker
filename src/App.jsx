@@ -37,7 +37,8 @@ import {
   ChevronLeft,
   Flag,
   Trophy,
-  Upload,
+  MessageCircle,
+  Sparkles,
   RefreshCw,
   LogOut,
   LogIn,
@@ -286,50 +287,163 @@ const CreatePlanModal = ({ isOpen, onClose, onCreate, isCreating }) => {
   );
 };
 
-const ImportModal = ({ isOpen, onClose, onImport }) => {
-  const [text, setText] = useState('');
+const ChatModal = ({ isOpen, onClose, goal = "General Training", onUpdatePlan, currentPlan }) => {
+  const [messages, setMessages] = useState([
+    { role: 'model', text: "Hi! I'm your AI running coach. Need to adjust your plan? Just ask!" }
+  ]);
+  const [input, setInput] = useState('');
+  const [loading, setLoading] = useState(false);
+  const messagesEndRef = React.useRef(null);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages, isOpen]);
 
   if (!isOpen) return null;
 
-  const handleImport = () => {
-    // Basic parsing: Date, Activity, Distance, Time
-    const lines = text.split('\n');
-    const logs = [];
-    lines.forEach(line => {
-      const parts = line.split(',').map(p => p.trim());
-      if (parts.length >= 3) {
-        logs.push({
-          date: parts[0],
-          plannedActivity: parts[1], // Or actual activity
-          actualDistance: parts[2],
-          durationStr: parts[3] || '',
-          rpe: 5,
-          feeling: 'Imported Log'
-        });
+  const handleSend = async (e) => {
+    e.preventDefault();
+    if (!input.trim()) return;
+
+    const userMsg = { role: 'user', text: input };
+    setMessages(prev => [...prev, userMsg]);
+    setInput('');
+    setLoading(true);
+
+    try {
+      const history = messages.map(m => ({
+        role: m.role,
+        parts: [{ text: m.text }]
+      }));
+      history.push({ role: 'user', parts: [{ text: userMsg.text }] });
+
+      const planContext = currentPlan ? `
+      Current Plan Context:
+      - Goal: ${currentPlan.goal}
+      - Start: ${currentPlan.startDate}
+      - Race: ${currentPlan.raceDate}
+      
+      IF the user asks to CHANGE or UPDATE the plan (e.g. "Move long runs to Sunday", "Make it harder", "I missed a week"):
+      1. Explain what you are changing.
+      2. GENERATE a JSON array of daily activities for the AFFECTED DATES (or the whole remainder of the plan).
+      3. WRAP the JSON in this EXACT delimiter: <<<PLAN_UPDATE>>> [ ... json ... ] <<<PLAN_UPDATE>>>
+      4. The JSON must strictly follow this schema: Array of { "date": "YYYY-MM-DD", "plannedActivity": "String" }.
+      5. Ensure dates are valid and within the plan range.
+      ` : '';
+
+      const systemPrompt = `You are an expert running coach. ${planContext}
+      Keep normal advice concise. Only generate JSON if the user EXPLICITLY asks to change the schedule.`;
+
+      const payload = {
+        contents: history,
+        systemInstruction: { parts: [{ text: systemPrompt }] }
+      };
+
+      const response = await fetch(API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+
+      const data = await response.json();
+      let reply = data.candidates?.[0]?.content?.parts?.[0]?.text || "Sorry, I couldn't generate a response.";
+
+      // Check for Plan Update
+      const updateMatch = reply.match(/<<<PLAN_UPDATE>>>([\s\S]*?)<<<PLAN_UPDATE>>>/);
+
+      if (updateMatch && updateMatch[1]) {
+        try {
+          const jsonStr = updateMatch[1].trim();
+          const newPlan = JSON.parse(jsonStr);
+
+          if (Array.isArray(newPlan) && onUpdatePlan) {
+            onUpdatePlan(newPlan);
+            reply = reply.replace(updateMatch[0], "").trim() + "\n\n✅ **Plan Updated!**";
+          }
+        } catch (e) {
+          console.error("Failed to parse plan update:", e);
+          reply += "\n\n(Technical Error: Failed to apply plan update)";
+        }
       }
-    });
-    onImport(logs);
+
+      setMessages(prev => [...prev, { role: 'model', text: reply }]);
+    } catch (error) {
+      console.error("Chat Error:", error);
+      setMessages(prev => [...prev, { role: 'model', text: "Error connecting to coach. Please try again." }]);
+    }
+    setLoading(false);
   };
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4 backdrop-blur-sm">
-      <div className="bg-white rounded-2xl shadow-2xl w-full max-w-lg p-6">
-        <h2 className="text-xl font-bold text-gray-800 mb-2">Import Logs</h2>
-        <p className="text-sm text-gray-500 mb-4">Paste your logs below. Format: <code className="bg-gray-100 px-1">YYYY-MM-DD, Activity, Distance, Time</code></p>
-        <textarea
-          className="w-full h-48 p-3 border rounded-lg font-mono text-xs"
-          placeholder={`2025-11-01, Easy Run, 5, 30:00\n2025-11-02, Long Run, 15, 1:30:00`}
-          value={text}
-          onChange={e => setText(e.target.value)}
-        />
-        <div className="flex gap-3 pt-4">
-          <button onClick={onClose} className="flex-1 p-3 rounded-lg font-bold text-gray-500 hover:bg-gray-100">Cancel</button>
-          <button onClick={handleImport} className="flex-1 p-3 bg-indigo-600 text-white rounded-lg font-bold shadow-lg hover:bg-indigo-700">Import</button>
+      <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md h-[600px] flex flex-col overflow-hidden animate-in fade-in zoom-in duration-200">
+        <div className="p-4 bg-indigo-600 text-white flex justify-between items-center shadow-md z-10">
+          <div className="flex items-center gap-3">
+            <div className="p-2 bg-white bg-opacity-20 rounded-full">
+              <Sparkles className="w-5 h-5 text-yellow-300" />
+            </div>
+            <div>
+              <h3 className="font-bold text-lg leading-tight">AI Coach</h3>
+              <p className="text-xs text-indigo-200 font-medium">Online • {goal}</p>
+            </div>
+          </div>
+          <button onClick={onClose} className="text-white hover:bg-white hover:bg-opacity-20 rounded-full p-2 transition-colors">
+            <ChevronLeft className="w-5 h-5" />
+          </button>
         </div>
+
+        <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-slate-50">
+          {messages.map((msg, idx) => (
+            <div key={idx} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+              <div className={`
+                max-w-[85%] p-3 rounded-2xl text-sm leading-relaxed shadow-sm whitespace-pre-line
+                ${msg.role === 'user'
+                  ? 'bg-indigo-600 text-white rounded-br-none'
+                  : 'bg-white text-slate-700 border border-slate-200 rounded-bl-none'}
+              `}>
+                {msg.text}
+              </div>
+            </div>
+          ))}
+          {loading && (
+            <div className="flex justify-start">
+              <div className="bg-white p-4 rounded-2xl rounded-bl-none border border-slate-200 shadow-sm flex gap-1.5 items-center">
+                <div className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
+                <div className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
+                <div className="w-1.5 h-1.5 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
+              </div>
+            </div>
+          )}
+          <div ref={messagesEndRef} />
+        </div>
+
+        <form onSubmit={handleSend} className="p-4 bg-white border-t border-slate-100 flex gap-2 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)] z-10">
+          <input
+            autoFocus
+            type="text"
+            className="flex-1 px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition-all text-sm placeholder:text-slate-400"
+            placeholder="Review my plan..."
+            value={input}
+            onChange={e => setInput(e.target.value)}
+          />
+          <button
+            type="submit"
+            disabled={!input.trim() || loading}
+            className="p-3 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 disabled:opacity-50 disabled:hover:bg-indigo-600 transition-all shadow-md active:scale-95"
+          >
+            <Zap className="w-5 h-5 fill-current" />
+          </button>
+        </form>
       </div>
     </div>
   );
 };
+
+
 
 const AuthModal = ({ isOpen, onClose }) => {
   const [isSignUp, setIsSignUp] = useState(false);
@@ -410,7 +524,7 @@ export default function App() {
   // UI State
   const [isCreatingPlan, setIsCreatingPlan] = useState(false);
   const [showCreateModal, setShowCreateModal] = useState(false);
-  const [showImportModal, setShowImportModal] = useState(false);
+  const [showChatModal, setShowChatModal] = useState(false);
   const [selectedLog, setSelectedLog] = useState(null);
   const [isEditingTitle, setIsEditingTitle] = useState(false);
   const [editedTitle, setEditedTitle] = useState('');
@@ -635,19 +749,34 @@ export default function App() {
     setIsAdjusting(false);
   };
 
-  const handleImportLogs = async (logs) => {
+
+
+  const handleChatUpdatePlan = async (newDays) => {
     if (!user || !currentPlanId) return;
+
+    // We expect newDays to be array of {date, plannedActivity}
+    // We should merge this into existing days
     const safeAppId = appId.replace(/[^a-zA-Z0-9_-]/g, '_');
     const batch = writeBatch(db);
     const daysRef = collection(db, 'artifacts', safeAppId, 'users', user.uid, 'plans', currentPlanId, 'days');
 
-    logs.forEach(log => {
-      const docRef = doc(daysRef, log.date);
-      batch.set(docRef, log, { merge: true });
+    newDays.forEach(day => {
+      if (day.date && day.plannedActivity) {
+        const docRef = doc(daysRef, day.date);
+        batch.set(docRef, {
+          date: day.date,
+          plannedActivity: day.plannedActivity
+        }, { merge: true });
+      }
     });
 
-    await batch.commit();
-    setShowImportModal(false);
+    try {
+      await batch.commit();
+      // Since we have a real-time listener on `planLogs`, the UI should update automatically.
+    } catch (e) {
+      console.error("Error updating plan from chat:", e);
+      alert("Failed to update plan.");
+    }
   };
 
   // --- Rendering Helpers ---
@@ -668,25 +797,30 @@ export default function App() {
     return Object.values(months).map((month, mIndex) => (
       <div key={mIndex} className="mb-8">
         <h3 className="text-lg font-bold text-gray-700 mb-3 sticky top-0 bg-gray-50 py-2 z-10">{month.label}</h3>
-        <div className="grid grid-cols-7 gap-1 sm:gap-2">
-          {/* Day Headers for the first month only? Or every month? Let's do every month for clarity or just once at top */}
+        <div className="grid grid-cols-1 md:grid-cols-7 gap-1 sm:gap-2">
+          {/* Day Headers - Desktop Only */}
           {mIndex === 0 && dayNames.map(d => (
-            <div key={d} className="text-center text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">{d}</div>
+            <div key={d} className="hidden md:block text-center text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">{d}</div>
           ))}
-          {/* Offset for first day of month */}
-          {Array(new Date(month.days[0]).getDay()).fill(null).map((_, i) => <div key={`empty-${i}`} />)}
+          {/* Offset for first day of month - Desktop Only */}
+          {Array(new Date(month.days[0]).getDay()).fill(null).map((_, i) => <div key={`empty-${i}`} className="hidden md:block" />)}
 
           {month.days.map(date => {
             const log = planLogs[date];
             const isRaceDay = date === currentPlan.raceDate;
             const isToday = date === dateToISO(new Date());
             const isCompleted = log && log.actualDistance && parseFloat(log.actualDistance) > 0;
-            const isRest = log && log.plannedActivity && log.plannedActivity.toLowerCase().includes('rest');
+
+            // Stricter Check for Rest Day: Must start with "Rest" or be strictly "Rest"
+            // Avoids false positives like "Intervals with rest"
+            const activityLower = log?.plannedActivity?.toLowerCase() || '';
+            const isRest = activityLower === 'rest' || activityLower.startsWith('rest ') || activityLower.startsWith('rest/');
+            const dayOfWeek = new Date(date).toLocaleDateString('en-US', { weekday: 'short' });
 
             let bgClass = "bg-white";
             if (isRaceDay) bgClass = "bg-yellow-100 border-yellow-400 ring-2 ring-yellow-400";
             else if (isCompleted) bgClass = "bg-green-50 border-green-200";
-            else if (isRest) bgClass = "bg-gray-100 text-gray-400";
+            else if (isRest) bgClass = "bg-gray-50 opacity-60";
             else if (isToday) bgClass = "bg-blue-50 border-blue-300";
             else if (!log) bgClass = "bg-gray-50 opacity-60"; // Future/Empty
 
@@ -695,28 +829,35 @@ export default function App() {
                 key={date}
                 onClick={() => setSelectedLog({ date, ...log, goal: currentPlan.goal })}
                 className={`
-                  relative min-h-[80px] p-2 border rounded-lg cursor-pointer transition-all hover:shadow-md
+                  relative p-3 border rounded-lg cursor-pointer transition-all hover:shadow-md
+                  min-h-[60px] md:min-h-[80px]
+                  flex flex-row md:flex-col items-center md:items-start justify-between md:justify-start gap-3 md:gap-0
                   ${bgClass}
                 `}
               >
-                <div className="flex justify-between items-start">
-                  <span className={`text-xs font-bold ${isToday ? 'text-blue-600' : 'text-gray-500'}`}>{date.split('-')[2]}</span>
-                  {isRaceDay && <Trophy className="w-4 h-4 text-yellow-600" />}
+                {/* Date Header */}
+                <div className="flex md:w-full justify-between items-center md:items-start md:mb-1 w-16 md:w-auto flex-shrink-0 flex-col md:flex-row">
+                  <div className="flex flex-col md:block items-center md:items-start">
+                    <span className="md:hidden text-[10px] font-bold text-gray-400 uppercase">{dayOfWeek}</span>
+                    <span className={`text-sm md:text-xs font-bold ${isToday ? 'text-blue-600' : 'text-gray-500'}`}>{date.split('-')[2]}</span>
+                  </div>
+                  {isRaceDay && <Trophy className="w-4 h-4 text-yellow-600 hidden md:block" />}
                 </div>
 
-                <div className="mt-1">
+                {/* Content */}
+                <div className="flex-1 text-left">
                   {log ? (
-                    <p className={`text-xs font-semibold line-clamp-3 ${isRest ? 'text-gray-400' : 'text-gray-800'}`}>{log.plannedActivity}</p>
+                    <p className={`text-sm md:text-xs font-semibold line-clamp-2 md:line-clamp-3 ${isRest ? 'text-gray-400' : 'text-gray-800'}`}>{log.plannedActivity}</p>
                   ) : (
                     isRaceDay ? <p className="text-xs font-black text-yellow-800">RACE DAY!</p> : <p className="text-[10px] text-gray-400 italic">Rest / TBD</p>
                   )}
                 </div>
 
-                {isCompleted && (
-                  <div className="absolute bottom-1 right-1">
-                    <CheckCircle className="w-3 h-3 text-green-500" />
-                  </div>
-                )}
+                {/* Status Icons */}
+                <div className="md:absolute md:bottom-1 md:right-1 flex-shrink-0">
+                  {isCompleted && <CheckCircle className="w-5 h-5 md:w-3 md:h-3 text-green-500" />}
+                  {isRaceDay && <Trophy className="w-5 h-5 text-yellow-600 md:hidden" />}
+                </div>
               </div>
             );
           })}
@@ -842,10 +983,10 @@ export default function App() {
 
               <div className="flex gap-2 flex-shrink-0">
                 <button
-                  onClick={() => setShowImportModal(true)}
-                  className="px-3 py-2 bg-white border border-gray-300 text-gray-700 text-sm font-semibold rounded-lg hover:bg-gray-50 transition flex items-center gap-2"
+                  onClick={() => setShowChatModal(true)}
+                  className="px-3 py-2 bg-indigo-50 border border-indigo-200 text-indigo-700 text-sm font-bold rounded-lg hover:bg-indigo-100 transition flex items-center gap-2"
                 >
-                  <Upload className="w-4 h-4" /> Import
+                  <MessageCircle className="w-4 h-4" /> Coach
                 </button>
                 <button
                   onClick={handleAdjustPlan}
@@ -896,10 +1037,12 @@ export default function App() {
         isCreating={isCreatingPlan}
       />
 
-      <ImportModal
-        isOpen={showImportModal}
-        onClose={() => setShowImportModal(false)}
-        onImport={handleImportLogs}
+      <ChatModal
+        isOpen={showChatModal}
+        onClose={() => setShowChatModal(false)}
+        goal={currentPlan?.goal}
+        currentPlan={currentPlan}
+        onUpdatePlan={handleChatUpdatePlan}
       />
 
       <AuthModal
