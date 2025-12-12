@@ -425,7 +425,7 @@ const ChatModal = ({ isOpen, onClose, goal = "General Training", onUpdatePlan, c
           <input
             autoFocus
             type="text"
-            className="flex-1 px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition-all text-sm placeholder:text-slate-400"
+            className="flex-1 px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition-all text-base placeholder:text-slate-400"
             placeholder="Review my plan..."
             value={input}
             onChange={e => setInput(e.target.value)}
