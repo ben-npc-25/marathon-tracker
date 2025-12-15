@@ -51,9 +51,17 @@ jobs:
       # Extract metadata (tags, labels) for Docker
       # https://github.com/docker/metadata-action
       - name: Extract Docker metadata
+        id: meta
         uses: docker/metadata-action@v5
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            # Tag with the commit hash and timestamp (YYYYMMDDHHmm)
+            type=raw,value={{date 'YYYYMMDDHHmm'}}
+            # Keep the branch name (e.g. 'main')
+            type=ref,event=branch
+            # Keep semver tags
+            type=semver,pattern={{version}}
 
       # Build and push Docker image with Buildx (don't push on PR)
       # https://github.com/docker/build-push-action
