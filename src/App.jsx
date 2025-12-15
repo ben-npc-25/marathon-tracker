@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+﻿import React, { useState, useEffect, useCallback } from 'react';
 import { auth, db, GEMINI_API_KEY } from './firebase-config';
 import {
   signInAnonymously,
@@ -46,7 +46,8 @@ import {
   Check,
   Mail,
   Lock,
-  Menu
+  Menu,
+  X
 } from 'lucide-react';
 
 // --- Configuration & Initialization ---
@@ -161,77 +162,200 @@ const generateTrainingPlan = async (goal, startDate, raceDate, existingLog = [],
 
 // --- Components ---
 
+// Helper to separate calculating pace
+const calculatePace = (distance, durationStr) => {
+  if (!distance || !durationStr) return null;
+  const dist = parseFloat(distance);
+  if (isNaN(dist) || dist <= 0) return null;
+
+  // Parse duration "MM:SS" or "HH:MM:SS"
+  const parts = durationStr.split(':').map(Number);
+  let totalMinutes = 0;
+  if (parts.length === 2) {
+    totalMinutes = parts[0] + parts[1] / 60;
+  } else if (parts.length === 3) {
+    totalMinutes = parts[0] * 60 + parts[1] + parts[2] / 60;
+  } else {
+    return null;
+  }
+
+  if (totalMinutes <= 0) return null;
+
+  const paceDec = totalMinutes / dist;
+  const paceMin = Math.floor(paceDec);
+  const paceSec = Math.round((paceDec - paceMin) * 60);
+  return `${paceMin}:${paceSec.toString().padStart(2, '0')} /km`;
+};
+
 const LogModal = ({ isOpen, onClose, log, onSave, onAnalyze, goal }) => {
   if (!isOpen || !log) return null;
 
-  const [formData, setFormData] = useState({
-    actualDistance: log.actualDistance || '',
-    durationStr: log.durationStr || '',
-    feeling: log.feeling || '',
-    rpe: log.rpe || 5,
-    coachFeedback: log.coachFeedback || '',
-  });
+  // Migration: If log has no 'activities' array but has legacy fields, create first activity
+  const initialActivities = log.activities || (log.actualDistance ? [{
+    actualDistance: log.actualDistance,
+    durationStr: log.durationStr,
+    rpe: log.rpe,
+    feeling: log.feeling
+  }] : [{ actualDistance: '', durationStr: '', rpe: 5, feeling: '' }]);
+
+  const [activities, setActivities] = useState(initialActivities);
+  const [coachFeedback, setCoachFeedback] = useState(log.coachFeedback || '');
   const [isAnalyzing, setIsAnalyzing] = useState(false);
 
   useEffect(() => {
-    setFormData({
-      actualDistance: log.actualDistance || '',
-      durationStr: log.durationStr || '',
-      feeling: log.feeling || '',
-      rpe: log.rpe || 5,
-      coachFeedback: log.coachFeedback || '',
-    });
+    // Reset state when modal opens with new log
+    const startActs = log.activities || (log.actualDistance ? [{
+      actualDistance: log.actualDistance,
+      durationStr: log.durationStr,
+      rpe: log.rpe,
+      feeling: log.feeling
+    }] : [{ actualDistance: '', durationStr: '', rpe: 5, feeling: '' }]);
+
+    setActivities(startActs);
+    setCoachFeedback(log.coachFeedback || '');
   }, [log]);
+
+  const handleActivityChange = (index, field, value) => {
+    const newActs = [...activities];
+    newActs[index] = { ...newActs[index], [field]: value };
+    setActivities(newActs);
+  };
+
+  const addActivity = () => {
+    setActivities([...activities, { actualDistance: '', durationStr: '', rpe: 5, feeling: '' }]);
+  };
+
+  const removeActivity = (index) => {
+    if (activities.length === 1) return; // Keep at least one
+    const newActs = activities.filter((_, i) => i !== index);
+    setActivities(newActs);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSave({ ...log, ...formData });
+    // Summarize for top-level legacy support (optional, but good for list view)
+    // We will pick the "primary" (activity 0) or sum them up. 
+    // Let's sum distance, pick max RPE, sum time (roughly).
+    // For now, let's just save the activities array and let the parent handle display logic or use the first one.
+
+    const totalDist = activities.reduce((acc, curr) => acc + (parseFloat(curr.actualDistance) || 0), 0);
+    // Simple sum of strings is hard, let's just keep the activities structure as the source of truth.
+    // We will populate the legacy fields from the FIRST activity so the calendar view doesn't break immediately if it uses them.
+    const primary = activities[0];
+
+    onSave({
+      ...log,
+      activities: activities,
+      coachFeedback,
+      // Legacy Back-compat:
+      actualDistance: totalDist > 0 ? totalDist.toFixed(1) : (primary.actualDistance || ''),
+      durationStr: primary.durationStr, // Showing only first duration in summary for now
+      rpe: Math.max(...activities.map(a => a.rpe || 5)),
+      feeling: activities.map(a => a.feeling).filter(Boolean).join(' | ')
+    });
   };
 
   const handleAnalyze = async () => {
-    if (!formData.actualDistance) return;
+    // Analyze all activities
+    if (activities.every(a => !a.actualDistance)) return;
     setIsAnalyzing(true);
-    const feedback = await onAnalyze(log, formData, goal);
-    setFormData(prev => ({ ...prev, coachFeedback: feedback }));
+
+    // Construct a composite log object for the analyzer
+    const compositeLog = {
+      ...log,
+      actualDistance: activities.map(a => a.actualDistance).join('+'),
+      durationStr: activities.map(a => a.durationStr).join('+'),
+      rpe: activities.map(a => a.rpe).join(','),
+      feeling: activities.map(a => a.feeling).join('. ')
+    };
+
+    // We pass a dummy single-object form data
+    const feedback = await onAnalyze(log, compositeLog, goal);
+    setCoachFeedback(feedback);
     setIsAnalyzing(false);
   };
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4 backdrop-blur-sm">
       <div className="bg-white rounded-2xl shadow-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto">
-        <div className="p-6 border-b border-slate-100 flex justify-between items-center">
+        <div className="p-6 border-b border-slate-100 flex justify-between items-center sticky top-0 bg-white z-10">
           <div>
             <h3 className="text-xl font-bold text-gray-800">{log.date}</h3>
             <p className="text-md text-indigo-600 font-semibold">{log.plannedActivity || "Rest / No Plan"}</p>
           </div>
-          <button onClick={onClose} className="text-gray-400 hover:text-gray-600">✕</button>
+          <button onClick={onClose} className="text-gray-400 hover:text-gray-600"><X className="w-6 h-6" /></button>
         </div>
+
         <form onSubmit={handleSubmit} className="p-6 space-y-6">
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <label className="block text-xs font-bold text-gray-500 mb-1 uppercase">Distance (km)</label>
-              <input type="number" step="0.1" className="w-full p-3 bg-gray-50 border rounded-lg" value={formData.actualDistance} onChange={e => setFormData({ ...formData, actualDistance: e.target.value })} />
-            </div>
-            <div>
-              <label className="block text-xs font-bold text-gray-500 mb-1 uppercase">Time</label>
-              <input type="text" placeholder="MM:SS" className="w-full p-3 bg-gray-50 border rounded-lg" value={formData.durationStr} onChange={e => setFormData({ ...formData, durationStr: e.target.value })} />
-            </div>
-          </div>
-          <div>
-            <div className="flex justify-between text-xs mb-1"><span>RPE</span><span className="font-bold text-indigo-600">{formData.rpe}/10</span></div>
-            <input type="range" min="1" max="10" className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-indigo-600" value={formData.rpe} onChange={e => setFormData({ ...formData, rpe: parseInt(e.target.value) })} />
-          </div>
-          <textarea className="w-full p-3 bg-gray-50 border rounded-lg h-20 resize-none" placeholder="Notes..." value={formData.feeling} onChange={e => setFormData({ ...formData, feeling: e.target.value })} />
+
+          {activities.map((activity, index) => {
+            const pace = calculatePace(activity.actualDistance, activity.durationStr);
+            return (
+              <div key={index} className="bg-slate-50 p-4 rounded-xl border border-slate-200 relative">
+                {activities.length > 1 && (
+                  <div className="absolute top-2 right-2 text-xs font-bold text-slate-300">#{index + 1}</div>
+                )}
+                <div className="grid grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <label className="block text-xs font-bold text-gray-500 mb-1 uppercase">Distance (km)</label>
+                    <input
+                      type="number"
+                      step="0.01"
+                      className="w-full p-3 bg-white border rounded-lg"
+                      value={activity.actualDistance}
+                      onChange={e => handleActivityChange(index, 'actualDistance', e.target.value)}
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-bold text-gray-500 mb-1 uppercase">Time (MM:SS)</label>
+                    <input
+                      type="text"
+                      placeholder="MM:SS"
+                      className="w-full p-3 bg-white border rounded-lg"
+                      value={activity.durationStr}
+                      onChange={e => handleActivityChange(index, 'durationStr', e.target.value)}
+                    />
+                  </div>
+                </div>
+
+                {/* Pace Display */}
+                {pace && (
+                  <div className="mb-4 text-xs font-bold text-indigo-500 flex items-center gap-1">
+                    <Zap className="w-3 h-3" /> Average Pace: {pace}
+                  </div>
+                )}
+
+                <div className="mb-4">
+                  <div className="flex justify-between text-xs mb-1"><span>RPE</span><span className="font-bold text-indigo-600">{activity.rpe}/10</span></div>
+                  <input type="range" min="1" max="10" className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-indigo-600" value={activity.rpe} onChange={e => handleActivityChange(index, 'rpe', parseInt(e.target.value))} />
+                </div>
+                <textarea
+                  className="w-full p-3 bg-white border rounded-lg h-16 resize-none text-sm"
+                  placeholder="How did it feel?"
+                  value={activity.feeling}
+                  onChange={e => handleActivityChange(index, 'feeling', e.target.value)}
+                />
+
+                {activities.length > 1 && (
+                  <button type="button" onClick={() => removeActivity(index)} className="mt-2 text-xs text-red-400 hover:text-red-600 underline">Remove this session</button>
+                )}
+              </div>
+            );
+          })}
+
+          <button type="button" onClick={addActivity} className="w-full py-2 border-2 border-dashed border-indigo-200 rounded-xl text-indigo-400 font-bold text-sm hover:bg-indigo-50 hover:border-indigo-300 transition-colors">
+            + Add Another Session
+          </button>
 
           {/* AI Feedback */}
           <div className="bg-indigo-50 p-4 rounded-lg border border-indigo-100">
             <div className="flex justify-between items-center mb-2">
               <label className="text-xs font-bold text-indigo-700 uppercase">AI Coach</label>
-              <button type="button" onClick={handleAnalyze} disabled={!formData.actualDistance || isAnalyzing} className="text-xs px-3 py-1 rounded-full font-bold bg-indigo-200 text-indigo-700 hover:bg-indigo-300 flex items-center gap-1">
-                {isAnalyzing ? <Loader2 className="w-3 h-3 animate-spin" /> : <Zap className="w-3 h-3" />} Analyze
+              <button type="button" onClick={handleAnalyze} disabled={isAnalyzing} className="text-xs px-3 py-1 rounded-full font-bold bg-indigo-200 text-indigo-700 hover:bg-indigo-300 flex items-center gap-1">
+                {isAnalyzing ? <Loader2 className="w-3 h-3 animate-spin" /> : <Zap className="w-3 h-3" />} Analyze All
               </button>
             </div>
-            <textarea className="w-full p-3 bg-white border border-indigo-200 rounded-lg h-24 resize-none text-sm" readOnly value={formData.coachFeedback} placeholder="Feedback will appear here..." />
+            <textarea className="w-full p-3 bg-white border border-indigo-200 rounded-lg h-24 resize-none text-sm" readOnly value={coachFeedback} placeholder="Feedback will appear here..." />
           </div>
 
           <div className="flex gap-3 pt-4">
@@ -362,7 +486,7 @@ const ChatModal = ({ isOpen, onClose, goal = "General Training", onUpdatePlan, c
 
           if (Array.isArray(newPlan) && onUpdatePlan) {
             onUpdatePlan(newPlan);
-            reply = reply.replace(updateMatch[0], "").trim() + "\n\n✅ **Plan Updated!**";
+            reply = reply.replace(updateMatch[0], "").trim() + "\n\n??**Plan Updated!**";
           }
         } catch (e) {
           console.error("Failed to parse plan update:", e);
@@ -388,7 +512,7 @@ const ChatModal = ({ isOpen, onClose, goal = "General Training", onUpdatePlan, c
             </div>
             <div>
               <h3 className="font-bold text-lg leading-tight">AI Coach</h3>
-              <p className="text-xs text-indigo-200 font-medium">Online • {goal}</p>
+              <p className="text-xs text-indigo-200 font-medium">Online ??{goal}</p>
             </div>
           </div>
           <button onClick={onClose} className="text-white hover:bg-white hover:bg-opacity-20 rounded-full p-2 transition-colors">
@@ -488,7 +612,7 @@ const AuthModal = ({ isOpen, onClose }) => {
             <label className="block text-sm font-bold text-gray-700 mb-1">Password</label>
             <div className="relative">
               <Lock className="w-4 h-4 absolute left-3 top-3 text-gray-400" />
-              <input required type="password" className="w-full p-3 pl-10 border rounded-lg" placeholder="••••••••" value={password} onChange={e => setPassword(e.target.value)} />
+              <input required type="password" className="w-full p-3 pl-10 border rounded-lg" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} />
             </div>
           </div>
           <button type="submit" disabled={loading} className="w-full p-3 bg-indigo-600 text-white rounded-lg font-bold shadow-lg hover:bg-indigo-700 flex items-center justify-center gap-2">
@@ -749,8 +873,6 @@ export default function App() {
     setIsAdjusting(false);
   };
 
-
-
   const handleChatUpdatePlan = async (newDays) => {
     if (!user || !currentPlanId) return;
 
@@ -797,7 +919,8 @@ export default function App() {
     return Object.values(months).map((month, mIndex) => (
       <div key={mIndex} className="mb-8">
         <h3 className="text-lg font-bold text-gray-700 mb-3 sticky top-0 bg-gray-50 py-2 z-10">{month.label}</h3>
-        <div className="grid grid-cols-1 md:grid-cols-7 gap-1 sm:gap-2">
+        {/* Changed grid gap to provide more vertical spacing between weeks (md:gap-y-6) */}
+        <div className="grid grid-cols-1 md:grid-cols-7 gap-x-1 gap-y-1 md:gap-y-6">
           {/* Day Headers - Desktop Only */}
           {mIndex === 0 && dayNames.map(d => (
             <div key={d} className="hidden md:block text-center text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">{d}</div>
@@ -809,20 +932,29 @@ export default function App() {
             const log = planLogs[date];
             const isRaceDay = date === currentPlan.raceDate;
             const isToday = date === dateToISO(new Date());
-            const isCompleted = log && log.actualDistance && parseFloat(log.actualDistance) > 0;
 
-            // Stricter Check for Rest Day: Must start with "Rest" or be strictly "Rest"
-            // Avoids false positives like "Intervals with rest"
+            // Check completion: Supports new 'activities' array or legacy 'actualDistance'
+            const hasActivities = log?.activities && log.activities.some(a => a.actualDistance && parseFloat(a.actualDistance) > 0);
+            const hasLegacy = log?.actualDistance && parseFloat(log.actualDistance) > 0;
+            const isCompleted = hasActivities || hasLegacy;
+
+            // Activity Type Analysis
             const activityLower = log?.plannedActivity?.toLowerCase() || '';
             const isRest = activityLower === 'rest' || activityLower.startsWith('rest ') || activityLower.startsWith('rest/');
+
             const dayOfWeek = new Date(date).toLocaleDateString('en-US', { weekday: 'short' });
 
+            // Styling Logic: Completed takes precedence over Rest styling
             let bgClass = "bg-white";
             if (isRaceDay) bgClass = "bg-yellow-100 border-yellow-400 ring-2 ring-yellow-400";
-            else if (isCompleted) bgClass = "bg-green-50 border-green-200";
+            else if (isCompleted) bgClass = "bg-green-50 border-green-200"; // Active Rest Day hits this too!
             else if (isRest) bgClass = "bg-gray-50 opacity-60";
             else if (isToday) bgClass = "bg-blue-50 border-blue-300";
             else if (!log) bgClass = "bg-gray-50 opacity-60"; // Future/Empty
+
+            // Mobile Week Spacing: Add margin bottom if it's Saturday to separate weeks
+            // Only on mobile (md:mb-0)
+            const marginClass = dayOfWeek === 'Sat' ? 'mb-6 md:mb-0' : '';
 
             return (
               <div
@@ -832,7 +964,7 @@ export default function App() {
                   relative p-3 border rounded-lg cursor-pointer transition-all hover:shadow-md
                   min-h-[60px] md:min-h-[80px]
                   flex flex-row md:flex-col items-center md:items-start justify-between md:justify-start gap-3 md:gap-0
-                  ${bgClass}
+                  ${bgClass} ${marginClass}
                 `}
               >
                 {/* Date Header */}
@@ -847,7 +979,7 @@ export default function App() {
                 {/* Content */}
                 <div className="flex-1 text-left">
                   {log ? (
-                    <p className={`text-sm md:text-xs font-semibold line-clamp-2 md:line-clamp-3 ${isRest ? 'text-gray-400' : 'text-gray-800'}`}>{log.plannedActivity}</p>
+                    <p className={`text-sm md:text-xs font-semibold line-clamp-2 md:line-clamp-3 ${isRest && !isCompleted ? 'text-gray-400' : 'text-gray-800'}`}>{log.plannedActivity}</p>
                   ) : (
                     isRaceDay ? <p className="text-xs font-black text-yellow-800">RACE DAY!</p> : <p className="text-[10px] text-gray-400 italic">Rest / TBD</p>
                   )}
@@ -977,7 +1109,7 @@ export default function App() {
                   </div>
                 )}
                 <span className="hidden sm:inline-block px-2 py-1 bg-gray-100 text-gray-500 text-xs rounded-full font-mono flex-shrink-0">
-                  {currentPlan.startDate} → {currentPlan.raceDate}
+                  {currentPlan.startDate} ??{currentPlan.raceDate}
                 </span>
               </div>
 
