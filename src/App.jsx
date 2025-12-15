@@ -512,7 +512,7 @@ const ChatModal = ({ isOpen, onClose, goal = "General Training", onUpdatePlan, c
             </div>
             <div>
               <h3 className="font-bold text-lg leading-tight">AI Coach</h3>
-              <p className="text-xs text-indigo-200 font-medium">Online ??{goal}</p>
+              <p className="text-xs text-indigo-200 font-medium">Online | {goal}</p>
             </div>
           </div>
           <button onClick={onClose} className="text-white hover:bg-white hover:bg-opacity-20 rounded-full p-2 transition-colors">
@@ -732,6 +732,18 @@ export default function App() {
     return () => unsubscribe();
   }, [user, currentPlanId, plans]);
 
+  // Auto-scroll to today
+  useEffect(() => {
+    if (currentPlan && !loading) {
+      setTimeout(() => {
+        const todayEl = document.getElementById('active-today');
+        if (todayEl) {
+          todayEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 500); // Small delay to ensure render
+    }
+  }, [currentPlan, loading]);
+
   // --- Handlers ---
 
   const handleCreatePlan = async ({ goal, startDate, raceDate }) => {
@@ -920,7 +932,7 @@ export default function App() {
       <div key={mIndex} className="mb-8">
         <h3 className="text-lg font-bold text-gray-700 mb-3 sticky top-0 bg-gray-50 py-2 z-10">{month.label}</h3>
         {/* Changed grid gap to provide more vertical spacing between weeks (md:gap-y-6) */}
-        <div className="grid grid-cols-1 md:grid-cols-7 gap-x-1 gap-y-1 md:gap-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-7 gap-x-2 gap-y-2 md:gap-y-2">
           {/* Day Headers - Desktop Only */}
           {mIndex === 0 && dayNames.map(d => (
             <div key={d} className="hidden md:block text-center text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">{d}</div>
@@ -958,7 +970,7 @@ export default function App() {
 
             return (
               <div
-                key={date}
+                id={isToday ? "active-today" : null}
                 onClick={() => setSelectedLog({ date, ...log, goal: currentPlan.goal })}
                 className={`
                   relative p-3 border rounded-lg cursor-pointer transition-all hover:shadow-md
@@ -1019,7 +1031,7 @@ export default function App() {
       `}>
         <div className="p-4 border-b border-gray-100 flex items-center gap-2 text-indigo-600">
           <Activity className="w-6 h-6 flex-shrink-0" />
-          <h1 className="text-lg font-black tracking-tight text-gray-900 leading-tight">RUNNER'S LOG</h1>
+          <h1 className="text-lg font-black tracking-tight text-gray-900 leading-tight">MARATHON TRACKER</h1>
         </div>
 
         <div className="flex-1 overflow-y-auto p-4 space-y-2">
@@ -1109,7 +1121,7 @@ export default function App() {
                   </div>
                 )}
                 <span className="hidden sm:inline-block px-2 py-1 bg-gray-100 text-gray-500 text-xs rounded-full font-mono flex-shrink-0">
-                  {currentPlan.startDate} ??{currentPlan.raceDate}
+                  {currentPlan.startDate} &rarr; {currentPlan.raceDate}
                 </span>
               </div>
 
