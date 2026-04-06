@@ -1,16 +1,69 @@
-# React + Vite
+# Marathon Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**AI-Powered Marathon Training Companion**
 
-Currently, two official plugins are available:
+Marathon Tracker is a modern, adaptive training application designed to help runners achieve their marathon goals. Powered by **Google Gemini**, it generates personalized training plans, adapts to your progress, and provides real-time AI coaching.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Key Features
 
-## React Compiler
+- **🏃‍♂️ AI Plan Generation**: Create custom training plans based on your race date, current fitness, and specific goals (e.g., "Sub-4 Tokyo Marathon").
+- **🤖 Adaptive Coaching**: The AI Coach reviews your logs and adjusts future workouts if you miss training or progress faster/slower than expected.
+- **💬 Interactive Coach Chat**: Chat with your AI Coach for advice on injuries, pacing, nutrition, or schedule adjustments.
+- **📊 Progress Tracking**: Log your runs with details like distance, time, RPE (Rate of Perceived Exertion), and notes.
+- **📈 Performance Analysis**: Get instant AI feedback on individual workouts to understand your performance.
+- **📱 Mobile-First PWA**: Installable on mobile devices (iOS/Android) for a native app-like experience.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Technology Stack
 
-## Expanding the ESLint configuration
+- **Frontend**: [React](https://react.dev/), [Vite](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/), [Lucide React](https://lucide.dev/) (Icons)
+- **Backend / Database**: [Firebase](https://firebase.google.com/) (Authentication, Firestore)
+- **AI Engine**: [Google Gemini API](https://ai.google.dev/) (gemini-2.5-flash-preview)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v18+)
+- A Firebase project with Authentication and Firestore enabled.
+- A Google Gemini API Key.
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/marathon-tracker.git
+   cd marathon-tracker
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Configure Environment Variables**
+   Create a `.env` file in the root directory and add your keys:
+   ```env
+   VITE_FIREBASE_API_KEY=your_firebase_api_key
+   VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
+   VITE_FIREBASE_PROJECT_ID=your_project_id
+   VITE_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
+   VITE_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+   VITE_FIREBASE_APP_ID=your_app_id
+   VITE_GEMINI_API_KEY=your_gemini_api_key
+   ```
+
+4. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+
+## 📱 Mobile Installation (PWA)
+
+1. Open the app in your mobile browser (Safari on iOS, Chrome on Android).
+2. Tap the "Share" button (iOS) or Menu (Android).
+3. Select **"Add to Home Screen"**.
+
+## 📄 License
+
+MIT
