@@ -1,0 +1,1902 @@
+{
+  "exportVersion": 1,
+  "exportedAt": "2026-04-02T04:51:18.709Z",
+  "plan": {
+    "goal": "Fukui Marathon",
+    "title": "Fukui Marathon Training Log",
+    "startDate": "2025-09-29",
+    "raceDate": "2026-03-29"
+  },
+  "days": [
+    {
+      "id": "2025-09-29",
+      "date": "2025-09-29",
+      "plannedActivity": "6–8 km @ 6:00–6:20/km",
+      "actualDistance": "5.21",
+      "durationStr": "23:10",
+      "rpe": 5,
+      "feeling": "Weather getting cooler and was faster the first program, feeling I can go faster than increase the speed without noticing",
+      "coachFeedback": "Great energy, but wrong zone for the day. 4:27/km is around MP/steady for you, not easy. It’s fine once, but we don’t want easy days turning into quality—consistency beats hero reps. \nGoogle Docs\n\nSlight under-distance (5.2 km vs 6–8 km) isn’t a big deal, but the intensity traded for volume. Next time, better to hit the volume at true easy."
+    },
+    {
+      "id": "2025-09-30",
+      "date": "2025-09-30",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-10-01",
+      "date": "2025-10-01",
+      "plannedActivity": "6–8 km easy + 4×20s strides",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-10-02",
+      "date": "2025-10-02",
+      "plannedActivity": "6–7 km easy",
+      "actualDistance": "7.44",
+      "durationStr": "38:58",
+      "rpe": 4,
+      "feeling": "Not having a good day, bit down on mood. Finish the run after work and take a quick nap, slow pace then easy breathing and legs felt light too. The left toe feels a bit hurt after the run though.",
+      "coachFeedback": "✔ 1. Distance is perfect\n\nYou hit the planned volume (slightly above 7 km). That’s good.\n\n⚠ 2. Pace was too fast for an easy day\n\nYour easy-day range right now is roughly 5:45–6:15/km, but you averaged 5:14/km, which is close to your steady pace / moderate aerobic zone.\n\nEven if it feels light, the impact on fatigue and recovery is real — especially because your body is still building back up.\n\nGoing too fast on easy days will hurt your quality workouts and long runs later.\n\n⸻\n\n⚠ 3. RPE 4 means it wasn’t truly easy\n\nEasy runs should feel like RPE 2–3. If mood was down and legs felt light, it was tempting to move faster, but we need to protect the training structure.\n\n⸻\n\n⚠ 4. Toe pain → early warning sign\n\nAny pain in the left toe after the run means:\n\t•\tSlight overloading\n\t•\tPossibly tight shoes when pace increases\n\t•\tOr early tendon/joint irritation\n\nWe’ll watch that. If it hurts again on the next run, we adjust immediately."
+    },
+    {
+      "id": "2025-10-03",
+      "date": "2025-10-03",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-10-04",
+      "date": "2025-10-04",
+      "plannedActivity": "14–16 km @ 5:30–5:45/km",
+      "actualDistance": "14.74",
+      "durationStr": "1:19:41",
+      "rpe": 5,
+      "feeling": "Cloudy day, running in the morning and at a moderate temperature, not as cool as running at night so the speed would slow down a bit. In general leg is not too heavy and have a chill run, stopped a few times for water though",
+      "coachFeedback": "You executed well in terms of volume, but the intensity crept up above “easy.”\nThis wasn’t a disaster — but we need to reinforce discipline on long run pace, because:\n\n“You get better at marathon pace by training below and above it — not by accidentally running every run near it.”\n\n5:24/km sits right between your easy pace and future marathon pace, meaning it’s neither recovery nor specific workout — it’s gray zone."
+    },
+    {
+      "id": "2025-10-05",
+      "date": "2025-10-05",
+      "plannedActivity": "",
+      "actualDistance": "27.39",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-10-06",
+      "date": "2025-10-06",
+      "plannedActivity": "6–8 km 5:45–6:15/km",
+      "actualDistance": "7.45",
+      "durationStr": "39:18",
+      "rpe": 3,
+      "feeling": "Cool weather, easy run didn't feel much fatigue from the run, refreshing. I think this pace is good enough for me as slow and recovery run, I can only run slower if I'm with someone or else it would be too bored for me to finish the run",
+      "coachFeedback": "You felt easy — but 5:17/km is not physiologically easy, even if it feels smooth.\n\nAt your current fitness, 5:17/km is sitting right in the “gray zone” — not hard enough to stimulate adaptation, not easy enough to promote recovery. It feels fine now, but consistently doing this will:\n\t•\tAccumulate hidden fatigue\n\t•\tMake future tempo / long runs harder\n\t•\tPossibly lead to niggles (like the toe from before)"
+    },
+    {
+      "id": "2025-10-07",
+      "date": "2025-10-07",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-10-08",
+      "date": "2025-10-08",
+      "plannedActivity": "6–8 km\n4:20–4:25/km (tempo segment)",
+      "actualDistance": "6.23",
+      "durationStr": "27:44",
+      "rpe": 5,
+      "feeling": "Bit hotter than the previous run, can't run that fast. Start slow and end faster but overall a bit slower than the expected pace, haven't been running tempo for a while, couldn't kept the speed for the whole time so I stopped a few times to recover",
+      "coachFeedback": "This is a solid first tempo back after a break.\nEven though you stopped a few times, the effort zone was correct, and the average pace still sits right around your threshold zone.\n\n👉 The main issue wasn’t fitness — it’s tempo endurance (ability to hold discomfort steadily), which will come back quickly in 2–3 sessions."
+    },
+    {
+      "id": "2025-10-09",
+      "date": "2025-10-09",
+      "plannedActivity": "6–7 km\n5:45–6:15/km",
+      "actualDistance": "5.09",
+      "durationStr": "25:55",
+      "rpe": 3,
+      "feeling": "Attend the running club and didn't find my friends so I kind of running faster just to catch up, still didn't catch up but turns out be a faster run. HIIT itself is not intense but focus on legs this time",
+      "coachFeedback": "Ran faster than planned while trying to catch up with the group; ended up doing 5.09 km @ 5:05/km plus 1 hr of leg-focused HIIT. Effort was solid, but overall intensity was moderate. Good aerobic and muscular work — just monitor fatigue before your next key session.\n\nYou handled the day well 👍 — that mix of a slightly faster run + lower-intensity HIIT is excellent balance. For recovery, take your next run easy (5:30–5:45/km) to keep legs fresh for the weekend long run."
+    },
+    {
+      "id": "2025-10-10",
+      "date": "2025-10-10",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-10-11",
+      "date": "2025-10-11",
+      "plannedActivity": "15–16 km\n5:35–5:45/km first 10 km \nlast 2–3 km 5:15–5:20/km",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-10-12",
+      "date": "2025-10-12",
+      "plannedActivity": "",
+      "actualDistance": "15.73",
+      "durationStr": "1:23:38",
+      "rpe": 3,
+      "feeling": "Saturday is raining then I switched my run to Sunday, easy stride easy run. I stopped a few time just to switch my podcast but that makes the distance reduce a little bit. My inner feet hurt a bit as I switch to an old damaged shoes, I might retired that shoes, it was scratching only nothing related to fatigue.",
+      "coachFeedback": "You ran longer and faster than the planned target (15.73 km at 5:19/km vs 14–16 km at 5:30–5:45/km), but your RPE was only 3, so the effort clearly stayed comfortable. That’s a good sign of improving aerobic strength. The only red flag is the foot irritation from the old shoes — definitely retire that pair so it doesn’t become a lingering issue.\n\nBecause this was supposed to be an easy long run, just make sure today’s faster pace doesn’t bleed into next week’s recovery. As long as your legs feel good and you stick to the right intensities in the coming sessions, no harm done. Let me know if the foot still feels off tomorrow."
+    },
+    {
+      "id": "2025-10-13",
+      "date": "2025-10-13",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-10-14",
+      "date": "2025-10-14",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-10-15",
+      "date": "2025-10-15",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-10-16",
+      "date": "2025-10-16",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-10-17",
+      "date": "2025-10-17",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-10-18",
+      "date": "2025-10-18",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-10-19",
+      "date": "2025-10-19",
+      "plannedActivity": "",
+      "actualDistance": "10.02",
+      "durationStr": "57:55",
+      "rpe": 3,
+      "feeling": "Easy run with my dad, though after 3 days of hike in yarigatake, my thighs are still a bit sore and have blisters at my feet. For this pace it was more like recovery run so it is ok, the hike itself isn't really tiring as it was separated with enough rest, except the last day coming down it was a bit fast and it cause some sore and stiffness building up",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-10-20",
+      "date": "2025-10-20",
+      "plannedActivity": "Rest or 4–5 km VERY easy jog",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-10-21",
+      "date": "2025-10-21",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-10-22",
+      "date": "2025-10-22",
+      "plannedActivity": "Easy run 6–7 km @ 5:45–6:15/km",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-10-23",
+      "date": "2025-10-23",
+      "plannedActivity": "5 km easy",
+      "actualDistance": "5.73",
+      "durationStr": "32:49",
+      "rpe": 1,
+      "feeling": "Was a bit sick so do a recovery run and running to a nearby burger place",
+      "coachFeedback": "That’s exactly the right call — low-intensity, short distance, and keeping the body moving while still respecting recovery. The 5:44/km pace fits well for a true easy run. No need to make up missed sessions this week — we’ll reset normal training next week once you’re fully back to normal."
+    },
+    {
+      "id": "2025-10-24",
+      "date": "2025-10-24",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-10-25",
+      "date": "2025-10-25",
+      "plannedActivity": "12–14 km @ 5:35–5:50/km",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-10-26",
+      "date": "2025-10-26",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-10-27",
+      "date": "2025-10-27",
+      "plannedActivity": "3 km @ tempo (4:45–4:55/km)\n\n2 min jog recovery\n\n2 km @ slightly faster (4:30–4:40/km)",
+      "actualDistance": "5.96",
+      "durationStr": "28:15",
+      "rpe": 3,
+      "feeling": "Haven't been running properly for a while, feels good to be back for a run. Start off slow jog for 1k then start picking up the pace, after 3k rest for a bit then start the second half of the run. Felt light for myself after the rest while after finishing the first half feeling a bit out of breath. In general great run, hoping to pick up my pace and gradually increasing the intensity of the program",
+      "coachFeedback": "✅ Solid restart — You hit the intended tempo effort almost perfectly. Averaging 4:45/km is right in the sweet spot for your target zone.\n💨 The structured rest after 3K worked as intended — helped you maintain good form and re-engage the legs for the faster finish.\n❤️ Effort (3) and feel (5) show you managed intensity well — perfect for a comeback after missed weeks.\n⚙️ Good sign that you felt light after the break; that means your aerobic base held up despite the skipped weeks."
+    },
+    {
+      "id": "2025-10-28",
+      "date": "2025-10-28",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-10-29",
+      "date": "2025-10-29",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-10-30",
+      "date": "2025-10-30",
+      "plannedActivity": "6–7 km @ 5:45–6:10/km",
+      "actualDistance": "3.51",
+      "durationStr": "17:48",
+      "rpe": 2,
+      "feeling": "chill recovery run, HIIT were mainly foucs on core and feels a bit effect on my abs now",
+      "coachFeedback": "✅ Even though you ran faster than the prescribed pace, it’s fine since the distance was short and effort stayed light (RPE 2).\n💪 The core-focused HIIT adds good balance to your training — strong abs help stabilize your form during long runs.\n⚠️ Just be mindful not to let all your “easy” runs drift into 5:00/km range — it can limit recovery over time."
+    },
+    {
+      "id": "2025-10-31",
+      "date": "2025-10-31",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-11-01",
+      "date": "2025-11-01",
+      "plannedActivity": "17–18 km @ 5:25–5:40/km",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-11-02",
+      "date": "2025-11-02",
+      "plannedActivity": "",
+      "actualDistance": "17.25",
+      "durationStr": "1:32:24",
+      "rpe": 4,
+      "feeling": "Running at a chill pace but I think I haven't been doing long run for quite a while, my breath and legs didn't catch right up. The first half is still alright I didn't stop and can go on, but coming back my knees starting to feel a bit pain, my feet also hurt a bit but not from the muscle but the contact from my shoes. Maybe the running form was not that good? Overall not a tough one I can kept the same distance but just need some time to pick up the program",
+      "coachFeedback": "✅ You managed the target distance well and held a pace slightly faster than prescribed (5:21/km vs. 5:25–5:40/km). That shows your aerobic base is still strong.\n⚠️ The knee and foot discomfort suggest mild form breakdown and muscle fatigue from not having done long runs recently. Nothing alarming, but good to address early.\n🦶 Check your shoe wear (especially midsole compression) and lacing — that “contact pain” is often from worn cushioning or slightly uneven strike."
+    },
+    {
+      "id": "2025-11-03",
+      "date": "2025-11-03",
+      "plannedActivity": "5–6 km @ 5:40–6:00/km\n (optional)",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-11-04",
+      "date": "2025-11-04",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-11-05",
+      "date": "2025-11-05",
+      "plannedActivity": "6–7 km total — include \n3–4 km @ 4:40–4:50/km",
+      "actualDistance": "6.79",
+      "durationStr": "31:32",
+      "rpe": 4,
+      "feeling": "Weather was cold so I ran a bit faster, starter at comfortable pace but gradually increasing, stop twice to rest a bit and kept going again. Slow down at around 5-6k and slowly jog 1k back",
+      "coachFeedback": "✅ You nailed the pace range — slightly faster (4:39/km average) but still controlled. Great aerobic efficiency despite the cold weather.\n⚠️ Two short stops suggest your stamina at tempo pace is still rebuilding, which is expected after recent inconsistent weeks.\n💡 The way you eased off and jogged back for cooldown was perfect — that keeps recovery smooth and prevents tightness.\n\nStrong tempo effort, on-pace and well controlled. Slight fatigue mid-run but finished smoothly. Stamina improving — great sign for base rebuild."
+    },
+    {
+      "id": "2025-11-06",
+      "date": "2025-11-06",
+      "plannedActivity": "5–6 km @ 5:45–6:10/km +\n 40–60 min HIIT (core/legs)",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-11-07",
+      "date": "2025-11-07",
+      "plannedActivity": "",
+      "actualDistance": "8.04",
+      "durationStr": "46:19",
+      "rpe": 2,
+      "feeling": "Light jog from my home to ikebukuro, stop a few time at the light. Try to stay at a very very slow pace without running to a point I forgot about should run at a chill pace. Nice run",
+      "coachFeedback": "Keep the long run tomorrow as planned — you’re in a good position to handle it well.\nMaybe start the first 5 km extra slow (even slower than usual), then settle into your normal endurance pace."
+    },
+    {
+      "id": "2025-11-08",
+      "date": "2025-11-08",
+      "plannedActivity": "16–18 km @ 5:25–5:40/km",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-11-09",
+      "date": "2025-11-09",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "1:26:46",
+      "rpe": 3,
+      "feeling": "Went out for a run after the rain is stopping, moved the run to sunday as I am busy at saturday. Whole run feels easy without acutally feeling tired and need to stop, should be the continous long run having some improvement. Only a bit hungry at the middle of the run.",
+      "coachFeedback": "This shows your aerobic base is growing rapidly again after the hiking/cold gap.\nYou’re sustaining a pace that used to be moderate effort for you — now it’s a steady aerobic cruise. That’s a strong fitness rebound.\n\nThe hunger mid-run suggests your glycogen stores were a bit low (normal if you ran before a big meal). You can start introducing a small fuel (like a gel at 8–10 km) when these long runs push over 90 minutes, to build fueling habits for race day."
+    },
+    {
+      "id": "2025-11-10",
+      "date": "2025-11-10",
+      "plannedActivity": "2 km warm-up jog → 5 km @ 4:35–4:45/km → 1 km cool-down",
+      "actualDistance": "5.07",
+      "durationStr": "23:11",
+      "rpe": 3,
+      "feeling": "Felt a bit tired while going fast, I always knew I am not so good at faster pace. If I am running at slower pace I can go further and longer but once I reach a certain pace I would want to stop and rest. I have rest a few times in this run. After running the 5k I did a chill jog back. I am thinking is the program needed to have some interval?",
+      "coachFeedback": "What you described (strong endurance at moderate pace but fatigue once pushing faster) is very common for marathon-focused runners — it means your aerobic base is solid, but your lactate threshold and running economy at higher intensities need sharpening.\n\nLet’s analyze your session:\n\n5 km @ 4:35/km — solid target pace, but since you needed short rests, that indicates your threshold pace (where fatigue starts building) currently sits around 4:45–4:50/km."
+    },
+    {
+      "id": "2025-11-11",
+      "date": "2025-11-11",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-11-12",
+      "date": "2025-11-12",
+      "plannedActivity": "9–10 km @ 5:15–5:30/km\nAfter 5 km, 3 × 100m strides",
+      "actualDistance": "9.03",
+      "durationStr": "49:10",
+      "rpe": 2,
+      "feeling": "Chill run, thought I would be going faster but stopping a lot of time at the light. Bit hungry and cold so run 9k instead of 10, also the 100m strides x3 feels good, it's always nice to have some different pace in the middle of the run, I did each 100 fast and 100 slow.",
+      "coachFeedback": "You held a steady aerobic effort (5:27/km) within target pace.\n\nYou added short strides correctly — those 100m fast/100m slow patterns help activate your neuromuscular system and gently introduce speed without real fatigue.\n\nFeeling hungry and cold but still completing 9 km shows good discipline and aerobic strength.\n\n✅ Training effect: improved running economy and leg turnover while staying in an easy zone.\n⚠️ Minor adjustment: on cold days, eat a small snack (banana, onigiri, or half protein bar) ~30 min before running to avoid mid-run hunger."
+    },
+    {
+      "id": "2025-11-13",
+      "date": "2025-11-13",
+      "plannedActivity": "6–7 km @ 5:45–6:00/km",
+      "actualDistance": "5.36",
+      "durationStr": "35:49",
+      "rpe": 1,
+      "feeling": "Run with running club friends while talking, good session and HIIT",
+      "coachFeedback": "This is exactly how an easy/recovery day should feel.\n\nSocial run + strength is perfect.\n\nPace was intentionally slow → excellent discipline."
+    },
+    {
+      "id": "2025-11-14",
+      "date": "2025-11-14",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-11-15",
+      "date": "2025-11-15",
+      "plannedActivity": "18–19 km total → first 14 km @ 5:25–5:35/km, last 4–5 km @ 5:00–5:10/km",
+      "actualDistance": "18.02",
+      "durationStr": "1:37:29",
+      "rpe": 3,
+      "feeling": "Run starting to get longer and longer, should start brough some gel but the weather is nicer and no need to stop for water and can run all the way back. But running pretty chill without going up the pace, would be adjusting the pace next time.",
+      "coachFeedback": "You held the upper end of the target long-run pace (5:25/km) comfortably.\n\nNo water/gels needed in cool weather = aerobic base improving.\n\nYou didn’t push the last 4–5 km, but completing 18 km comfortably is more important at this stage."
+    },
+    {
+      "id": "2025-11-16",
+      "date": "2025-11-16",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-11-17",
+      "date": "2025-11-17",
+      "plannedActivity": "2 km warm-up\n\n4 × 1 km @ 4:20–4:30/km, 2 min jog between\n\n1–2 km cool down",
+      "actualDistance": "1.05",
+      "durationStr": "5:41",
+      "rpe": 5,
+      "feeling": "Interval was pretty intense for me, haven't been going fast for a while and I need some time to adjust. The first two was in the designated time but the third one drop to 4:41 so the last one I picked up a bit more. Not impossible to finish but I think I will need more interval sessions to build up my vo2 max again. The others are simply warm up and cool down jog",
+      "coachFeedback": "What you did well:\nYou hit the target pace perfectly for the first two reps (4:23 avg).\nYou fought through rep 3 even when it got hard — that’s exactly how VO₂max sessions should feel.\nYou finished strong with a faster rep 4 after losing pace on rep 3. Great mental strength.\nWarm-up and cooldown were appropriate and long enough.\n\nWhat this tells me:\nYour speed endurance is not fully back yet, which is normal because:\nYou had a break from quality runs (cold + trekking weeks).\nYou’ve been focusing more on threshold/steady work recently.\nYour VO₂max ceiling is still high, but your ability to repeat fast reps is temporarily lower.\nThis type of workout is exactly what will sharpen your 10K performance.\n\nThis was a 5/5 session — strong, controlled, productive."
+    },
+    {
+      "id": "2025-11-18",
+      "date": "2025-11-18",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-11-19",
+      "date": "2025-11-19",
+      "plannedActivity": "8–10 km @ 5:15–5:30/km\n\nFinish with 4 × 80m relaxed strides",
+      "actualDistance": "8.67",
+      "durationStr": "44:01",
+      "rpe": 3,
+      "feeling": "Good run, weather is cold so goes a bit faster without checking the pace. Also forgot the strides after the run, but I guess going faster is compensating for that? Feeling good for this run though",
+      "coachFeedback": "This was a very solid aerobic run — running at 5:05/km in cold weather is totally fine, especially since it felt relaxed and you didn’t force the pace. The effort matches what an 8–10 km endurance day should feel like, so there’s no harm from forgetting the strides. The slightly quicker pace already gives you a bit of neuromuscular stimulus, so it effectively replaces the strides for today. Most importantly, your comment about “feeling good” is exactly what we want mid-week: smooth effort, no strain, and good recovery signs. We stay on track for Thursday’s session without any adjustments."
+    },
+    {
+      "id": "2025-11-20",
+      "date": "2025-11-20",
+      "plannedActivity": "5–7 km @ 5:45–6:10/km (talking pace)\n\nIf club does HIIT, keep intensity low–moderate only",
+      "actualDistance": "5.32",
+      "durationStr": "29:39",
+      "rpe": 1,
+      "feeling": "easy day, chill run with friends and HIIT mainly foucs on thighs",
+      "coachFeedback": "Great job keeping this truly easy — 5.32 km at 5:35/km sits right where an aerobic recovery run should be, and pairing it with a light-to-moderate HIIT session focused on legs is okay since the duration was manageable. The key is that your perceived effort was low, which is exactly what we want between quality days. This session supports good blood flow and leg activation without adding fatigue, so you’re well set up for Saturday’s long run. Keep your Friday rest or ultra-easy, and your legs should feel refreshed going into the weekend."
+    },
+    {
+      "id": "2025-11-21",
+      "date": "2025-11-21",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-11-22",
+      "date": "2025-11-22",
+      "plannedActivity": "16–17 km\n\nFirst 12 km @ 5:25–5:40/km\n\nLast 4–5 km @ 5:10–5:20/km",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-11-23",
+      "date": "2025-11-23",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-11-24",
+      "date": "2025-11-24",
+      "plannedActivity": "",
+      "actualDistance": "18.00",
+      "durationStr": "1:34:06",
+      "rpe": 3,
+      "feeling": "Skipped the Saturday run and feel pretty powerful today, started the run in a cold weather so start in a faster pace but feels ok today so going all the way forward in the same pace. Feeling strong so probably can handle a higher intensity run",
+      "coachFeedback": "18 km @ 5:14/km is faster than target, but your RPE shows it was controlled (RPE 3), not forced.\n\t•\tCold weather + fresh legs from skipping Saturday naturally gave you extra speed — that’s fine.\n\t•\tYou held consistent aerobic pace with no fade, which is a great sign your aerobic base is strengthening.\n\t•\tThis suggests you’re ready to start gradually raising the intensity on your mid-week sessions, just like you asked before."
+    },
+    {
+      "id": "2025-11-25",
+      "date": "2025-11-25",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-11-26",
+      "date": "2025-11-26",
+      "plannedActivity": "2 km warm-up\n6 km @ 4:40–4:45/km\n2 km cool-down",
+      "actualDistance": "1.02",
+      "durationStr": "5:18",
+      "rpe": 5,
+      "feeling": "Actually the 6k is a bit tough for me, not sure is my condition not so good today or what. The pace drop to around 5min at the middle and I stopped at 3k to take a rest and pick up again. Not like I cannot finish this program and this is a really tough one but my mind want to stop and chill out",
+      "coachFeedback": "You still completed the required 6 km tempo in the correct pace range (average 4:42).\nYour warm-up and cool-down were solid.\nRPE 5 means right on target for this intensity.\nThis workout will boost your threshold for the upcoming 10k and the half marathon in Feb.\nNothing is wrong with your fitness — your mind felt it because this is a breakthrough-type workout."
+    },
+    {
+      "id": "2025-11-27",
+      "date": "2025-11-27",
+      "plannedActivity": "6–7 km @ 5:45–6:00/km\n4 × 80m strides",
+      "actualDistance": "7.17",
+      "durationStr": "36:36",
+      "rpe": 2,
+      "feeling": "Chill run, a bit sad worrying about situation in hong kong so didn't go to run club. Stopped once at the middle but not tired simply stopping for a round",
+      "coachFeedback": "✔ Fitness level\n7.17 km at 5:06/km on what was supposed to be 5:45–6:00/km shows:\nAerobic system strong\nCold weather helping you hold efficiency\nYour “easy pace” is naturally drifting faster → sign of progress\n✔ Stopping once\nTotally fine. This wasn’t a fatigue stop — more a mental reset. Emotional load absolutely affects running. The fact you kept pace well indicates your body is fine."
+    },
+    {
+      "id": "2025-11-28",
+      "date": "2025-11-28",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-11-29",
+      "date": "2025-11-29",
+      "plannedActivity": "12–13 km total\n\t•\tFirst 8 km @ 5:25–5:40\n\t•\tLast 4–5 km @ 5:05–5:15 (comfortably strong)",
+      "actualDistance": "12.89",
+      "durationStr": "1:07:24",
+      "rpe": 3,
+      "feeling": "Feeling actually a bit fatigued in my legs, it's not like I will be stopping within this 12k but the run is not as smooth as usual, or maybe I didn't keep track of my pace, I was thinking only 12k so I have been going faster thinking I can definitely finishing strong even if I go fast a little bit. In general easy run but not as feeling good as the usual long run",
+      "coachFeedback": "Faster-than-planned long run with noticeable leg fatigue. Finished strong but run felt less smooth than usual. Probably due to accumulated fatigue from earlier sessions. Still a solid execution and shows improving aerobic base. Will keep next week steady and avoid increasing long-run distance."
+    },
+    {
+      "id": "2025-11-30",
+      "date": "2025-11-30",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-12-01",
+      "date": "2025-12-01",
+      "plannedActivity": "6–7 km @ 5:45–6:10/km\n+ 3 × 100m relaxed strides",
+      "actualDistance": "7.41",
+      "durationStr": "40:31",
+      "rpe": 2,
+      "feeling": "Forgot about the stides, but really relax run. Chill but a bit faster than the expected pace",
+      "coachFeedback": "Your Monday run was a solid, controlled aerobic session — the slightly faster-than-prescribed pace is not a concern as long as it felt relaxed, and your note suggests it genuinely did. Missing the strides won’t harm the week at all; the important part is that you showed up and kept the effort smooth after a weekend with some fatigue. This sets you up well for the upcoming workouts, and it’s good that you didn’t push harder to “make up” for anything. Consistency > perfection."
+    },
+    {
+      "id": "2025-12-02",
+      "date": "2025-12-02",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-12-03",
+      "date": "2025-12-03",
+      "plannedActivity": "2 km warm-up\n5 × 1 km @ 4:20–4:30/km\n2 min jog between reps\n1–1.5 km cool-down",
+      "actualDistance": "1.04",
+      "durationStr": "5:28",
+      "rpe": 5,
+      "feeling": "For the 5k each k I can kept the pace around 4:20 without dropping much and even go further but need to slow down a bit. It was tough and I feel my lungs had a bit pain due to the out of breath but it was manageable. I thought 4:20 was easier back when I was running with my running club back in hong kong. Maybe when I was running with others with the same pace it will be easier and I can follow someone's pace, also I will felt like I can't lose then I will go faster. Running alone is hard to keep up the pace and going out to run alone is pretty tough in the cold wind. My pace and the effort right now I really not sure if I can make it even sub310",
+      "coachFeedback": "Your 1 km repeats at 4:20 pace were an excellent session — you held the pace consistently, stayed within the target window, and even had extra gear but wisely held back. The lung discomfort is simply the body’s response to colder air plus working near lactate threshold; it doesn’t indicate poor fitness. Running fast reps alone in winter is always harder, and you’re right that pack running feels easier due to drafting, shared rhythm, and competitive drive. The fact that you hit every rep solo in the cold actually shows your fitness is stronger than you think. This session is exactly on track for half-marathon pace development, and absolutely consistent with sub-3:10 marathon potential later — you’re not supposed to “feel like a 3:10 runner” in December, you’re supposed to train toward it. You’re doing the work."
+    },
+    {
+      "id": "2025-12-04",
+      "date": "2025-12-04",
+      "plannedActivity": "5–7 km @ 5:45–6:15/km (talking pace)",
+      "actualDistance": "5.24",
+      "durationStr": "30:15",
+      "rpe": 1,
+      "feeling": "Easy run with club member, hiit focus on abs and bicep, feel it in my body the next day",
+      "coachFeedback": "Great job keeping the easy run truly easy — your 5:46/km pace is right inside the talking-pace range. Running with a club member naturally sets a relaxed rhythm, which is ideal before HIIT. The HIIT session focusing on abs and biceps will definitely create DOMS the next day, but this doesn’t interfere with running performance too much because the main impact muscles (glutes, quads, hamstrings) weren’t overloaded. Overall, this was a well-balanced recovery day, and the light cardio + upper-body focused HIIT is totally fine within the weekly structure."
+    },
+    {
+      "id": "2025-12-05",
+      "date": "2025-12-05",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-12-06",
+      "date": "2025-12-06",
+      "plannedActivity": "15–17 km total\nFirst 12 km @ 5:20–5:35/km\nLast 3–5 km @ 5:00–5:10/km",
+      "actualDistance": "16.82",
+      "durationStr": "1:28:19",
+      "rpe": 3,
+      "feeling": "Good long run, nice weather, sleep well, easy finish without any pain or fatigue. No need to stop or whatever straight back to home",
+      "coachFeedback": "This was an excellent long run — controlled, steady, and finished strong. Your 5:15/km average suggests you handled the “faster last section” more naturally than usual, helped by good sleep and good weather. The lack of fatigue, no stopping, and smooth finish all show your aerobic base is getting very solid. This is the kind of long run that quietly builds marathon strength: relaxed middle pacing, stable heart rate, and strong legs even late into the run. This is a big confidence-building session, and exactly what we want at this phase of training."
+    },
+    {
+      "id": "2025-12-07",
+      "date": "2025-12-07",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-12-08",
+      "date": "2025-12-08",
+      "plannedActivity": "2 km warm-up\n4 km @ 4:45–4:50/km\n1.5–2 km cool-down",
+      "actualDistance": "5.25",
+      "durationStr": "24:28",
+      "rpe": 3,
+      "feeling": "It was too cold and I got out late so I didn't do the warm up and cool down but ran a bit more distance. Feeling strong today and the pace goes up a bit, nice run",
+      "coachFeedback": "Running 4:40/km in cold weather is very normal — cold air naturally makes you drift faster because your HR stays lower early in the run.\n\nEven without the warm-up, the run was smooth, you didn’t spike too fast, and no muscle tightness or pain reported → that means your baseline aerobic strength is improving.\n\nSkipping cool-down also isn’t harmful as long as you walked a bit and didn't instantly sit down."
+    },
+    {
+      "id": "2025-12-09",
+      "date": "2025-12-09",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-12-10",
+      "date": "2025-12-10",
+      "plannedActivity": "6–7 km @ 5:40–6:00/km\n+ 4 × 100m relaxed strides",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-12-11",
+      "date": "2025-12-11",
+      "plannedActivity": "5–6 km @ 5:45–6:10/km",
+      "actualDistance": "7.28",
+      "durationStr": "37:10",
+      "rpe": 2,
+      "feeling": "It was easy for me, I was pretty stable for this run except a few kms I went faster and go over 5min, the heart rate was around 153 and overall a good run. Feeling stress from work today so wanna do a longer and faster run to get that out of my chest",
+      "coachFeedback": "Great job getting the run done — and honestly, this was totally fine.\nYes, the pace was faster than prescribed, but:\n\nHR ~153 is still in an aerobic / moderate zone for you\n\nYou didn’t turn it into a tempo\n\nYou stayed stable\n\nYou’re not reporting fatigue afterward\n\nSo it won’t hurt your training at all.\n\nAlso, using running to release stress is completely normal — just as long as you don’t habitually turn every easy day into a medium-hard day. Once in a while = totally okay."
+    },
+    {
+      "id": "2025-12-12",
+      "date": "2025-12-12",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-12-13",
+      "date": "2025-12-13",
+      "plannedActivity": "17–18 km total\n\nFirst 12 km @ 5:25–5:40/km\n\nLast 5–6 km @ 5:05–5:15/km",
+      "actualDistance": "18.02",
+      "durationStr": "1:34:26",
+      "rpe": 3,
+      "feeling": "My breath is ok and can handle the run pretty well, but somehow my hamstring on my right foot is a bit tight. It faded away after a while but in the middle I still felt it for a period of time, I don't think it was affecting my performance maybe I simply didn't do warm up and causes this",
+      "coachFeedback": "18.0 km @ 5:14/km with a faster finish is exactly what we want at this stage:\n\t•\tBreathing under control\n\t•\tNo need to stop\n\t•\tStrong, even pacing\n\t•\tFinished without accumulating fatigue\n\nThis confirms your aerobic base is solid and still improving.\n\n⸻\n\n⚠️ About the right hamstring tightness\n\nWhat you described is classic “cold + no warm-up” tightness, not an injury signal:\n\t•\tAppeared early → faded later\n\t•\tDid not worsen as pace increased\n\t•\tDid not affect stride or performance\n\t•\tNo lingering pain afterward (based on your description)\n\nThis is very common in winter, especially on progression long runs.\n\nNot a red flag unless:\n\t•\tIt shows up again in the next 1–2 runs\n\t•\tIt becomes sharp or localized\n\t•\tIt persists after running or the next morning\n\nRight now, this is a yellow flag only, not red."
+    },
+    {
+      "id": "2025-12-14",
+      "date": "2025-12-14",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-12-15",
+      "date": "2025-12-15",
+      "plannedActivity": "7–8 km @ 5:40–6:00/km\n+ 4 × 100m relaxed strides",
+      "actualDistance": "7.51",
+      "durationStr": "39:12",
+      "rpe": 2,
+      "feeling": "Easy run, no pain in any parts. Split the run in two parts, I went running back from some places to home in my jacket in a slower pace and after that change back to normal running suit and finsih the rest. Didn't do the strides thoough",
+      "coachFeedback": "Effort 2/5 → perfect for an easy day\nPace drifted faster than prescribed again, but you stayed relaxed and pain-free\nSplitting the run due to clothing/weather is totally fine — it doesn’t reduce the training effect\nSkipping strides once again is not an issue (we’ll just re-add them later)\nThe most important signals are:\n✔ no hamstring tightness\n✔ no soreness\n✔ legs feel normal afterward\nThat tells me your recovery from the long run is good.\nSmall note for you\nYou tend to naturally settle around ~5:10–5:20/km on easy days. That’s okay occasionally, but on Thursday I really want you to slow it down a bit (think 5:45–6:05) to stay fresh for Wednesday’s quality session."
+    },
+    {
+      "id": "2025-12-16",
+      "date": "2025-12-16",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-12-17",
+      "date": "2025-12-17",
+      "plannedActivity": "2 km warm-up\n4 × 1 km @ 4:25–4:35/km\n2 min easy jog between reps\n1.5–2 km cool-down",
+      "actualDistance": "1.16",
+      "durationStr": "6:12",
+      "rpe": 3,
+      "feeling": "4k is still ok as an interval, not pushing myself to the point that I felt tough. Also 2min rest for each rep is still generous enough for me to rest and go again with more strength in me. Not a bad program but I still think I can push myself harder",
+      "coachFeedback": "Execution: very clean\nYou averaged 4:22/km, which is faster than the prescribed range.\n\nEffort 3/5: exactly what we want at this stage\nYou finished feeling in control, not destroyed.\n\nRecovery: 2-min jog is indeed generous for you — that’s why it felt repeatable and strong.\n\nSo yes — you’re right: you could push harder.\nBut right now, not pushing is the correct decision."
+    },
+    {
+      "id": "2025-12-18",
+      "date": "2025-12-18",
+      "plannedActivity": "5–6 km @ 5:45–6:10/km\nHIIT optional, keep intensity low–moderate",
+      "actualDistance": "5.16",
+      "durationStr": "30:35",
+      "rpe": 1,
+      "feeling": "Actual recovery run, casual chat with fd and hiit but with easy effort",
+      "coachFeedback": "Effort 1/5 is perfect here. This run did its job: circulation, relaxation, and setting you up for the long run. Nothing more needed."
+    },
+    {
+      "id": "2025-12-19",
+      "date": "2025-12-19",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-12-20",
+      "date": "2025-12-20",
+      "plannedActivity": "18–19 km total\n\t•First 13 km @ 5:25–5:40/km\n\t•Last 5–6 km @ 5:00–5:10/km",
+      "actualDistance": "18.24",
+      "durationStr": "1:39:35",
+      "rpe": 2,
+      "feeling": "Long run with fds from hk, was slow jog in the beginning as I am still finding them. Also their pace of long run is much slower, then they're doing progressive run which is 5k slow and 5k fast I follow through a bit brining up the pace. But in general this long run was under effort a bit",
+      "coachFeedback": "Yes, this long run was under-target in intensity, but that’s actually fine this week because:\n\t•\tYou had a solid interval session midweek\n\t•\tYou’re stacking mileage consistently\n\t•\tYou avoided fatigue accumulation\n\nThink of this as a “maintenance long run” rather than a progression long run."
+    },
+    {
+      "id": "2025-12-21",
+      "date": "2025-12-21",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-12-22",
+      "date": "2025-12-22",
+      "plannedActivity": "7–8 km @ 5:35–5:55/km\n4 × 100 m relaxed strides",
+      "actualDistance": "7.63",
+      "durationStr": "40:14",
+      "rpe": 2,
+      "feeling": "Didn't felt any fatigue while running, I thought I kept it around 530 but apparently I ran faster than the expected pace. The effort was easy though and I did also the 4 strides in between of the run",
+      "coachFeedback": "Pace drift (5:16 vs 5:35–5:55) with easy effort = aerobic fitness improving\nNo fatigue + strides done = good neuromuscular freshness\nThis is exactly what we want before a quality-heavy week\n👉 Don’t “correct” this by forcing yourself slower unless HR or effort creeps up. Easy = effort-based, not pace-policing."
+    },
+    {
+      "id": "2025-12-23",
+      "date": "2025-12-23",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-12-24",
+      "date": "2025-12-24",
+      "plannedActivity": "2 km warm-up\n\n5 × 1 km @ 4:20–4:25/km\n⏱ 90 sec easy jog (reduced from 2 min)\n\n1.5–2 km cool-down",
+      "actualDistance": "0.96",
+      "durationStr": "4:56",
+      "rpe": 3,
+      "feeling": "My first few reps was slower even after warming up, it might be due to the cold weather. It was tough at the end but I manage to keep the pace, I'm still not sure if I'm struggling at this pace can I do a good job when I did my marathon. Should I do interval faster than my marathon pace",
+      "coachFeedback": "5 × 1 km @ 4:24 average with only 90 sec jog\n✔ You completed all reps\n✔ Pace stayed controlled (no blow-up)\n✔ Tough at the end = correct stimulus\n\nCold weather + solo running = totally explains why rep 1–2 felt awkward."
+    },
+    {
+      "id": "2025-12-25",
+      "date": "2025-12-25",
+      "plannedActivity": "5–6 km @ 5:45–6:10/km\nHIIT optional → low–moderate only",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-12-26",
+      "date": "2025-12-26",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-12-27",
+      "date": "2025-12-27",
+      "plannedActivity": "18–20 km total\n\nStructure:\n\t•First 12 km @ 5:25–5:40/km\n\t•Last 6–8 km @ 5:00–5:10/km",
+      "actualDistance": "",
+      "durationStr": "1:20:07",
+      "rpe": 2,
+      "feeling": "Easy run with my friend, didn't finish the whole program since he is tired. His program is a easy and marathon pace interchange, but when we are talking we didn't go up to the target pace",
+      "coachFeedback": "Coach response\n\t•\tEven though shorter, this was still a useful aerobic long run.\n\t•\tSocial pace + conversation = true aerobic zone.\n\t•\tYou already have multiple 18–19 km runs banked → no loss here."
+    },
+    {
+      "id": "2025-12-28",
+      "date": "2025-12-28",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-12-29",
+      "date": "2025-12-29",
+      "plannedActivity": "2 km easy warm-up\n\t•\t4 × 1 km @ 4:25–4:30/km\n⏱ 90 sec easy jog\n\t•\t1.5–2 km cool-down",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-12-30",
+      "date": "2025-12-30",
+      "plannedActivity": "•\t12–14 km @ 5:20–5:40/km\n\t•\tLast 3 km gently progressive → ~5:05–5:15/km",
+      "actualDistance": "16.41",
+      "durationStr": "1:22:36",
+      "rpe": 2,
+      "feeling": "Last long run before the trip, run a bit more because couldn't run for a while, easy program",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2025-12-31",
+      "date": "2025-12-31",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-01-01",
+      "date": "2026-01-01",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-01-02",
+      "date": "2026-01-02",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-01-03",
+      "date": "2026-01-03",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-01-04",
+      "date": "2026-01-04",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-01-05",
+      "date": "2026-01-05",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-01-06",
+      "date": "2026-01-06",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-01-07",
+      "date": "2026-01-07",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-01-08",
+      "date": "2026-01-08",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-01-09",
+      "date": "2026-01-09",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-01-10",
+      "date": "2026-01-10",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-01-11",
+      "date": "2026-01-11",
+      "plannedActivity": "東京ニューイヤーハーフマラソン",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-01-12",
+      "date": "2026-01-12",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-01-13",
+      "date": "2026-01-13",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-01-14",
+      "date": "2026-01-14",
+      "plannedActivity": "12–15 min continuous jog\n\nPace: slower than 6:00/km\n\nFlat surface only",
+      "actualDistance": "",
+      "durationStr": "25:05",
+      "rpe": 1,
+      "feeling": "Recovery run after a long long time, was using a wrong posture to run in the beginning so my left heel and outer foot hurt a bit at first. After 2k I adjust my posture and I didn't have that feeling again. Since I have been adjusting my walking posture for quite a while after the injury, my running posture was affected too, I was afraid of hurting my toes once again. But after this running I didn't felt any pain while walking, only a bit pain while bending my toes on purpose, but normal walking and running is not gonna cause the pain. No need to limp again",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-01-15",
+      "date": "2026-01-15",
+      "plannedActivity": "30–35 min easy\nPace: ~5:50–6:10/km\nFinish with 4 × 20s relaxed strides only if:\nPain during run = 0–1\nNo toe guarding",
+      "actualDistance": "5.54",
+      "durationStr": "30:09",
+      "rpe": 1,
+      "feeling": "Actually the pain is gone when I run this program, I can even run at 5min pace without any issue",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-01-16",
+      "date": "2026-01-16",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-01-17",
+      "date": "2026-01-17",
+      "plannedActivity": "60–70 min easy\nPace: 5:40–6:00/km",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-01-18",
+      "date": "2026-01-18",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-01-19",
+      "date": "2026-01-19",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-01-20",
+      "date": "2026-01-20",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-01-21",
+      "date": "2026-01-21",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-01-22",
+      "date": "2026-01-22",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-01-23",
+      "date": "2026-01-23",
+      "plannedActivity": "",
+      "actualDistance": "7.62",
+      "durationStr": "36:56",
+      "rpe": 2,
+      "feeling": "I was trying to raise my speed and I didn't feel the pain while in the middle of the run, my breath was not worsen cause I haven't run for a while, I'll need to pick up my program again",
+      "coachFeedback": "•\tToe tolerated faster-than-easy pace\n\t•\tNo mechanical pain signal\n\t•\tCardiovascular system felt relaxed\n\t•\tYour “easy” pace has drifted faster than before the break (normal after rest)"
+    },
+    {
+      "id": "2026-01-24",
+      "date": "2026-01-24",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-01-25",
+      "date": "2026-01-25",
+      "plannedActivity": "",
+      "actualDistance": "17.76",
+      "durationStr": "1:13:23",
+      "rpe": 2,
+      "feeling": "My feet hurts a bit since my toes cannot bend, it's not muscle pain but the tendon stretch too much. Stopped a few times then it's fine, I should be able to run the half marathon but with a slower pace next week",
+      "coachFeedback": "Positives ✅\n\t•\tAerobically this was very comfortable\n\t•\tDistance tolerance is there\n\t•\tYou managed symptoms by stopping → good awareness\n\t•\tNo muscle damage signs\n\nConcern ⚠️ (this is the key)\n\n“Toes cannot bend… tendon stretch too much”\n\nThat phrase is important.\n\nThis points to:\n\t•\tBig toe flexor / plantar tendon still stiff\n\t•\tLimited toe extension under fatigue\n\t•\tLoad tolerance still just below race-level stress\n\nThis is not dangerous, but it’s not healed yet."
+    },
+    {
+      "id": "2026-01-26",
+      "date": "2026-01-26",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-01-27",
+      "date": "2026-01-27",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-01-28",
+      "date": "2026-01-28",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-01-29",
+      "date": "2026-01-29",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-01-30",
+      "date": "2026-01-30",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-01-31",
+      "date": "2026-01-31",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-02-01",
+      "date": "2026-02-01",
+      "plannedActivity": "横浜ハーフマラソン",
+      "actualDistance": "",
+      "durationStr": "1:44:40",
+      "rpe": 3,
+      "feeling": "This half marathon was a tough one, I was late to the race and my belly was having some issue, glad I found a toilet. I barely store my luggage and start the run without proper warming up. \n\nMy left stomach hurt until 15k after I ate some gel, maybe it was caused by not warming up enough or eating a onigiri before the run and didn't give it enough time to digest. The feet also hurt throughout the whole race, the original toe pain was gone in the middle of the run but seems my heel was hurt by me constantly walking, but glad it was not the damage from my previous bike crash. I also stopped myself from going faster, telling myself this was not worth it since the full marathon is the main game, I pace myself precisely around 5min, it obviously have faster and slower moment but I manage to control and have discipline throughout the race. \n\nIt was better than I expected as the pain was gone, just 1-2 pain from my heel but that would be gone just resting for a few days. I could start the training for my marathon again",
+      "coachFeedback": "What you did right ✅\n\nYou did not race your fitness\n\nYou locked into ~5:00/km and stayed there\n\nYou ignored competitive impulses\n\nYou protected March 29 as the priority\n\nThat’s textbook “training race” execution.\n\nAbout the stomach issue\n\nThis was almost certainly:\n\nLate start → stress spike\n\nOnigiri too close to gun time\n\nNo warm-up → blood flow redistribution shock\n\nGel taken while already under GI stress\n\nNone of this reflects your fitness.\n\nFixable, easily."
+    },
+    {
+      "id": "2026-02-02",
+      "date": "2026-02-02",
+      "plannedActivity": "Rest or 20–30 min very easy",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-02-03",
+      "date": "2026-02-03",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-02-04",
+      "date": "2026-02-04",
+      "plannedActivity": "Off or 30 min recovery jog",
+      "actualDistance": "",
+      "durationStr": "31:38",
+      "rpe": 2,
+      "feeling": "Easy run, felt my strength dropped by a lot, running around 5min will need to stop for a few times. The race is only 2months from now, I am probably not being able to pick up the pace again. The pain is almost all gone but just the joint is a bit stiff, will need to pick up the miles and include some interval in the program",
+      "coachFeedback": "You called this an easy run, but objectively:\n\n4:58/km is not recovery pace for you\n\nYou ran it 2–3 days after a half marathon\n\nWith recent injury + travel fatigue\n\nStopping a few times at that pace right now is normal, not alarming.\n\nThis does not mean your strength “dropped a lot.”\nIt means you tried to run too fast for the recovery window."
+    },
+    {
+      "id": "2026-02-05",
+      "date": "2026-02-05",
+      "plannedActivity": "",
+      "actualDistance": "10.65",
+      "durationStr": "57:26",
+      "rpe": 2,
+      "feeling": "Actual recovery run, take it easy and didn't stop in the middle. Was planning to go to running club but as you suggest I shouldn't be doing HIIT then I just go run by myself",
+      "coachFeedback": "This is the strongest signal we’ve had since your half marathon.\n\nIt shows:\n\n✅ You can run continuously again\n\n✅ Easy pace is naturally returning to the 5:20–5:30 range\n\n✅ Aerobic efficiency is intact\n\n✅ No protective gait or forced stops\n\n✅ Recovery from the half marathon is progressing normally\n\nMost importantly:\nYou didn’t force it. You let it come to you. That’s why it worked."
+    },
+    {
+      "id": "2026-02-06",
+      "date": "2026-02-06",
+      "plannedActivity": "40 min total\n\n35 min easy @ 5:35–5:50/km\n\nThen 4 × 15–20s relaxed strides",
+      "actualDistance": "18.44",
+      "durationStr": "1:41:34",
+      "rpe": 2,
+      "feeling": "Didn't felt any pain or fatigue in my legs, this distance is still easy for my current physical conditions. It's just running at night after work and I am pretty hungry. I forgot to buy any energy gel with me so I was eagerly going for dinner after the run. I still ran the long run in consecutive day as sat and sun is really snowing and I am not able to run. I will be taking rest for both of the days",
+      "coachFeedback": "First: did you mess up by running 3 days straight?\nNo. And here’s why.\nAll three runs were low effort (RPE 2)\nPace was controlled, not drifting\nYou explicitly reported no pain, no leg fatigue\nThe “long run” was still well within aerobic comfort for your current fitness\nThat combo matters more than calendar spacing.\nRecovery is about stress × intensity, not just “number of days in a row.”\nThree easy days ≠ three hard days.\nIf this had been:\ntempo + intervals + long → I’d stop you immediately\nor if you felt stiffness, dead legs, poor sleep → red flag\nBut none of those happened.\nSo from a coaching standpoint: this was a smart adaptation to weather, not a panic move.\nThe real issue I care about (and you should too)\nNot your legs.\nFueling.\nRunning 18 km at night, fasted-ish, hungry, no gel is the one thing I don’t love.\nNot because it ruins today — but because:\nIt increases stress hormones\nIt slows recovery after\nIt trains your body to associate long runs with depletion\nYou got away with it because your aerobic base is solid. Don’t make it a habit.\nRule going forward\n75–80 min → bring something (gel, candy, sports drink)\nNight runs after work are not the time to play glycogen chicken"
+    },
+    {
+      "id": "2026-02-07",
+      "date": "2026-02-07",
+      "plannedActivity": "90 minutes\nPace: 5:35–5:55/km",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-02-08",
+      "date": "2026-02-08",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-02-09",
+      "date": "2026-02-09",
+      "plannedActivity": "10–12 km easy @ 5:30–5:45/km\n\nThen 4–6 × 20s relaxed strides",
+      "actualDistance": "10.62",
+      "durationStr": "54:08",
+      "rpe": 2,
+      "feeling": "A run that felt good. Although running after dinner, I can let it digest for some time and just run in my own pace. I didn't felt going faster than expected, wasn't checking my watch that close and this pace wasn't force but easy run. I did a few stride at the end of the run also.",
+      "coachFeedback": "1️⃣ Your aerobic engine didn’t disappear\n\nEven after:\n\t•\tToe injury\n\t•\tForced downtime\n\t•\tA scrappy half marathon\n\t•\tCold weather + fatigue\n\nYou’re naturally settling around ~5:05/km when relaxed.\nThat’s exactly what I’d expect from a sub-3:10 candidate.\n\nThis isn’t fitness loss — it’s rust, and rust comes off fast.\n\n⸻\n\n2️⃣ Your effort–pace relationship is healthy again\n\nEasy pace feels easy.\nNo breath stress, no forcing, no watch checking.\n\nThat’s a green light to:\n\t•\tKeep easy days truly easy\n\t•\tStart structured quality again (carefully)\n\n⸻\n\n3️⃣ The toe is no longer dictating your stride\n\nStrides at the end with no guarding = ✔️\nThis is the biggest signal that we can progress.\n\nStill:\n\t•\tWalking stiffness ≠ running readiness\n\t•\tWe manage load, not ignore it"
+    },
+    {
+      "id": "2026-02-10",
+      "date": "2026-02-10",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-02-11",
+      "date": "2026-02-11",
+      "plannedActivity": "3 km easy warm-up\n\n3 × 10 min @ ~4:45–4:50/km\n\n2 min easy jog between\n\n2–3 km cool-down",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-02-12",
+      "date": "2026-02-12",
+      "plannedActivity": "8–10 km easy @ 5:35–5:55/km\n\nNO HIIT",
+      "actualDistance": "13.87",
+      "durationStr": "1:07:57",
+      "rpe": 6,
+      "feeling": "The run is actually tiring, I did the two laps instead of 3. Going faster pace drains the stamina fast but refreshing, nice run",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-02-13",
+      "date": "2026-02-13",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-02-14",
+      "date": "2026-02-14",
+      "plannedActivity": "18–20 km @ 5:25–5:45/km\n\nLast 3–4 km gently progressive → ~5:05–5:15/km\n\nFuel: gel or carbs around 60 min",
+      "actualDistance": "22.14",
+      "durationStr": "1:54:55",
+      "rpe": 4,
+      "feeling": "Almost twist my feet when some random kids run around, now my right toes was twist a bit too but not too serious, can run and walk without issue. Today was a bit hot so the run was tougher, I stopped a few times towards the end of the run",
+      "coachFeedback": "That’s a solid effort. Maybe a bit too solid.\n\n5:11/km average for 22 km means you ran a large portion quicker than prescribed.\n\nRPE 4 is still controlled, but you are drifting toward “training on feel” instead of executing structure."
+    },
+    {
+      "id": "2026-02-15",
+      "date": "2026-02-15",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-02-16",
+      "date": "2026-02-16",
+      "plannedActivity": "12 km easy\n5:25–5:45/km",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-02-17",
+      "date": "2026-02-17",
+      "plannedActivity": "",
+      "actualDistance": "1.98",
+      "durationStr": "10:24",
+      "rpe": 2,
+      "feeling": "Accidentally stopped the watch thus separating the run in two. Simply go with the flow easy run, felt the pain in the feet cause I didn't run properly. I was kind of bending my toes a bit due to the injury, but in this run I try ignoring it and run straightly, the pain was gone and the run was smooth, really easy run didn't felt any struggle this run",
+      "coachFeedback": "~13 km at 5:16/km (RPE 2) confirms aerobic fitness is strong and easy pace is naturally improving. The key takeaway was mechanical — when I stopped subconsciously guarding the previously injured toe and ran with normal push-off mechanics, the discomfort disappeared, indicating the issue was protective compensation rather than active tissue irritation. Effort remained genuinely easy, though pace drifted slightly faster than prescribed, which is not harmful now but requires discipline to avoid accumulating gray-zone fatigue over time. Overall this was a stable aerobic run with positive biomechanical feedback and no signs of overload."
+    },
+    {
+      "id": "2026-02-18",
+      "date": "2026-02-18",
+      "plannedActivity": "•\t3 km easy\n\t•\t3 × 12 min @ 4:40–4:45/km\n\t•\t2–3 min easy jog\n\t•\t2–3 km cool down",
+      "actualDistance": "3.44",
+      "durationStr": "18:01",
+      "rpe": 6,
+      "feeling": "Easy run for warm up and cool down. Actually I was not getting used to this pace now as I haven't been running fast for some time, the first rep was a bit rough for me and I thought I cannot kept the pace. Until the second or the third rep, I started picking up the pace. Still this shouldn't be hard for me in the past, 443 was simply a faster warm up for me. I might need to train my speed a little more?",
+      "coachFeedback": "Completed 3 × 12 min at ~4:43/km (RPE 6). First rep felt uncomfortable due to lack of recent threshold exposure, but rhythm improved significantly by the second and third reps, indicating aerobic capacity is intact and lactate clearance simply needed activation. Effort remained controlled and sustainable, appropriate for marathon-specific threshold work. No signs of speed loss—this was a rhythm readjustment rather than a fitness limitation. Session confirms current fitness is stable and progressing appropriately toward marathon specificity."
+    },
+    {
+      "id": "2026-02-19",
+      "date": "2026-02-19",
+      "plannedActivity": "8–10 km\n5:35–5:55/km",
+      "actualDistance": "5.30",
+      "durationStr": "32:53",
+      "rpe": 2,
+      "feeling": "Easy run and hiit with running club, was nice seeing friend but some hiit was tired for my toe",
+      "coachFeedback": "5.3 km very easy at 6:13/km served as proper recovery after threshold session. However, the additional 1-hour HIIT introduced multi-directional and high-impact stress, which caused noticeable toe fatigue. While no acute pain was reported, this type of instability load carries higher risk during marathon-specific preparation and should be limited moving forward. Overall recovery remains good, but non-running intensity must be managed carefully to protect foot durability."
+    },
+    {
+      "id": "2026-02-20",
+      "date": "2026-02-20",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-02-21",
+      "date": "2026-02-21",
+      "plannedActivity": "24 km total\n\nStructure:\n\t•\t16 km @ 5:25–5:40\n\t•\t6 km @ 4:55–5:00\n\t•\t2 km easy cool down",
+      "actualDistance": "",
+      "durationStr": "2:14:46",
+      "rpe": 3,
+      "feeling": "Good long run, haven't been running along the river after I moved. The weather was warmer and I can run with constant pace, running along side some marathon racer and might brought myself a bit faster. I did bring up the pace a bit at the end.",
+      "coachFeedback": "25.5 km long run at 5:17/km (RPE 3) demonstrates strong aerobic durability and controlled effort in warmer conditions. Marathon-pace segment was executed smoothly with slight pace lift toward the end without significant strain, indicating improving endurance and pace control. Running alongside other marathoners provided positive rhythm reinforcement without overexertion. Overall session confirms stable fitness progression and readiness to gradually increase marathon-specific workload in the coming weeks."
+    },
+    {
+      "id": "2026-02-22",
+      "date": "2026-02-22",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-02-23",
+      "date": "2026-02-23",
+      "plannedActivity": "12–13 km easy\n5:25–5:45/km",
+      "actualDistance": "10.56",
+      "durationStr": "58:08",
+      "rpe": 3,
+      "feeling": "Maybe it's not enough sleep, with this pace I still feel a bit out of breath when I'm running in the beginning few km. In general it was a easy run but I didn't finish 12 since I want to order my breakfast and the breakfast hour is almost finished",
+      "coachFeedback": "10.6 km easy at 5:30/km (RPE 3) showed mild early breathing discomfort likely due to residual long-run fatigue and suboptimal sleep, but effort normalized after initial kilometers. Overall aerobic effort remained controlled and no mechanical issues were present. Slightly elevated perceived effort indicates normal training load accumulation during peak phase rather than overreaching. Shortening the run due to external timing constraints was appropriate given its recovery purpose."
+    },
+    {
+      "id": "2026-02-24",
+      "date": "2026-02-24",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-02-25",
+      "date": "2026-02-25",
+      "plannedActivity": "3 km easy\n2 × 18 min @ 4:38–4:45/km\n3 min easy jog between\n2–3 km cool down",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-02-26",
+      "date": "2026-02-26",
+      "plannedActivity": "8–10 km\n5:35–6:00/km",
+      "actualDistance": "3.43",
+      "durationStr": "17:27",
+      "rpe": 5,
+      "feeling": "I push back the quality program for one day as it's raining. Not sure it's the training actually works or I had coffee or I wore back my old boston 12 which is perfectly fit my feet. This run went super well and I am not very tired in the run, I could even go faster and run more after the program",
+      "coachFeedback": "Completed 2 × 18 min threshold session averaging 4:39/km with RPE 5. Effort remained controlled throughout and athlete reported ability to extend pace, indicating strong aerobic condition without overreaching. Mechanical response was stable and session was executed with appropriate restraint. Training adaptation trending positively entering peak marathon-specific block."
+    },
+    {
+      "id": "2026-02-27",
+      "date": "2026-02-27",
+      "plannedActivity": "",
+      "actualDistance": "12.48",
+      "durationStr": "1:07:26",
+      "rpe": 2,
+      "feeling": "Easy slow jog, going further than I expected, went for sushi at around 9k and run back home afterwards. Chill and nice run",
+      "coachFeedback": "12.48 km easy at 5:24/km (RPE 2) the day after threshold session. Effort remained very light with no residual fatigue, indicating strong aerobic recovery and good training absorption. Athlete extended distance naturally without strain, demonstrating improving endurance durability. Overall condition remains stable entering next key session."
+    },
+    {
+      "id": "2026-02-28",
+      "date": "2026-02-28",
+      "plannedActivity": "26–27 km total\n\nStructure:\n\t•\t14–16 km @ 5:25–5:40\n\t•\t8–10 km @ 4:55–5:00\n\t•\t1–2 km easy cool down",
+      "actualDistance": "28.08",
+      "durationStr": "2:20:25",
+      "rpe": 4,
+      "feeling": "The average pace was faster than I expected, I was chill running today but maybe the weather today is too good I just go faster a bit. Today is sunny and not too cold, I was wearing more than I should be and maybe I can go even faster if I am wearing short pants. I am actually do negative pacing, I checked the split and it was around 5min in the first half and 4min ish in the last. Strong finish and I can go for more next week",
+      "coachFeedback": "Completed 28.08 km long run averaging 5:00/km with negative split and RPE 4. Session exceeded planned volume slightly and evolved into a progressive sustained aerobic effort rather than strictly structured pace blocks. Athlete demonstrated strong aerobic control and finished with reserve, indicating improving endurance capacity. Load was significant but manageable; consolidation and controlled progression next week are advised."
+    },
+    {
+      "id": "2026-03-01",
+      "date": "2026-03-01",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-03-02",
+      "date": "2026-03-02",
+      "plannedActivity": "8–10 km\n5:40–6:00/km",
+      "actualDistance": "9.33",
+      "durationStr": "50:05",
+      "rpe": 2,
+      "feeling": "Easy jog, just a few round in my local park. Easy and no pain",
+      "coachFeedback": "9.33 km easy at 5:22/km (RPE 2). Effort remained light with no residual fatigue or foot discomfort following prior long run. Aerobic efficiency continues to improve as moderate paces feel relaxed. Session served as effective recovery and circulation stimulus heading into quality midweek work."
+    },
+    {
+      "id": "2026-03-03",
+      "date": "2026-03-03",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-03-04",
+      "date": "2026-03-04",
+      "plannedActivity": "3 km easy\n3 × 12–15 min @ 4:40–4:45/km\n3 min jog between\n2–3 km cool down",
+      "actualDistance": "3.43",
+      "durationStr": "17:42",
+      "rpe": 4,
+      "feeling": "I was mistaken the pace at the first rep, I thought it was 4:50-5 min so I was slower than the expected pace. Though in the next 2 rep I feel like I'm doing ok so I went faster and at last the pace was around the original expected pace. Good and quality session",
+      "coachFeedback": "Threshold session completed with 3 × ~15 min averaging 4:41/km after a 3.4 km warm-up. The first rep started slightly conservative due to pace confusion but pacing stabilized well in the following reps. Effort remained controlled (RPE 4) and aerobic strength is clearly returning after the injury break. This was a strong quality workout with good pacing discipline and no foot issues, setting up the remainder of the week and the upcoming long run well."
+    },
+    {
+      "id": "2026-03-05",
+      "date": "2026-03-05",
+      "plannedActivity": "10–12 km\n5:35–5:50/km",
+      "actualDistance": "8.57",
+      "durationStr": "45:22",
+      "rpe": 2,
+      "feeling": "Was too hungry and cold so I cut short the session, was struggling to get out because of the cold.",
+      "coachFeedback": "Easy run shortened to 8.57 km due to cold weather and hunger, but effort remained very low (RPE 2) and the run served as light aerobic recovery after the previous day’s threshold session. Although pace drifted slightly faster than intended, overall fatigue appears controlled and the adjustment likely helps maintain freshness heading into the upcoming marathon-specific long run."
+    },
+    {
+      "id": "2026-03-06",
+      "date": "2026-03-06",
+      "plannedActivity": "8–10 km total\n\nInside:\n4–5 km @ 4:55–5:00/km",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-03-07",
+      "date": "2026-03-07",
+      "plannedActivity": "30–31 km max\n\nStructure:\n\t•\t18–20 km @ 5:25–5:40\n\t•\t8 km @ 4:55–5:00\n\t•\t2–3 km easy",
+      "actualDistance": "31.25",
+      "durationStr": "2:38:01",
+      "rpe": 4,
+      "feeling": "Seeing the split my pace was pretty stable, I was staying around 5min all the time. I stopped quite a lot at the end of the run as I'll have to wait for the lights. Also the wind is too strong that blows until I couldn't stand up straight. I didn't feel tired until around 2x k, maybe coming back the wind is blowing too strong causing me to not able to run properly. I know the pace was faster than expected but I didn't force it just running naturally.",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-03-08",
+      "date": "2026-03-08",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-03-09",
+      "date": "2026-03-09",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-03-10",
+      "date": "2026-03-10",
+      "plannedActivity": "10–12 km easy\n\nPace: 5:35–5:50/km",
+      "actualDistance": "10.51",
+      "durationStr": "53:42",
+      "rpe": 2,
+      "feeling": "Light jog, surprisingly light my body is after the skiing trip. Maybe resting for a day did help, and some caffeine.",
+      "coachFeedback": "Easy recovery run of 10.5 km completed after a rest day following the long run and skiing weekend. Effort remained very low (RPE 2) despite a slightly faster pace, suggesting good recovery and adaptation to the previous training load. Legs felt light and relaxed, indicating readiness to resume structured workouts later in the week."
+    },
+    {
+      "id": "2026-03-11",
+      "date": "2026-03-11",
+      "plannedActivity": "10–11 km\n\nPace: 5:30–5:45/km",
+      "actualDistance": "11.10",
+      "durationStr": "1:00:27",
+      "rpe": 1,
+      "feeling": "Really easy run, had a dinner in the middle and start picking up the run so not even running fast",
+      "coachFeedback": "Easy recovery run at very low effort. Despite averaging 5:27/km, the run felt effortless (RPE 1), indicating good recovery from the previous long run and skiing fatigue. The mid-run dinner stop made the session even more relaxed, and the purpose of the run—maintaining aerobic volume while keeping the legs fresh—was achieved. Overall a positive sign that fatigue is under control and the body is ready for the upcoming marathon-pace workout."
+    },
+    {
+      "id": "2026-03-12",
+      "date": "2026-03-12",
+      "plannedActivity": "16 km\n        •        3 km easy\n        •        10 km @ marathon pace (4:28–4:32)\n        •        3 km cool down",
+      "actualDistance": "3.49",
+      "durationStr": "18:10",
+      "rpe": 5,
+      "feeling": "It was actually easier than I expected, when I first started my 10k I felt outside of my calves is pretty tight. My only thought is can I kept this on for the full marathon? I haven't been doing speed session throughout my program, especially after my injury. After the rest, at the second half of 5k it actually felt easier, at the end there was a guy with also 4min pace and I follow for a while. I can follow through and I can still finish strong and went a bit faster too. However after going faster for around 2k I felt bit tired and last jog is essential to cool down.",
+      "coachFeedback": "Strong marathon-pace workout. After a 3 km warm-up, completed 10 km at 4:27/km, slightly faster than the planned marathon pace range. The outer calves felt tight at the beginning, but the pace settled after a few kilometers and the effort became smoother. Following another runner in the later stage helped maintain rhythm, and a small surge for about 2 km showed there was still energy in reserve. Fatigue appeared after the faster segment, making the cooldown jog important for recovery. Overall a very positive session indicating marathon pace is sustainable and controlled."
+    },
+    {
+      "id": "2026-03-13",
+      "date": "2026-03-13",
+      "plannedActivity": "8–10 km easy\n\n5:35–5:50/km",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-03-14",
+      "date": "2026-03-14",
+      "plannedActivity": "32 km\n\nWear the Adidas Adizero Adios Pro 4\n\nStructure:\n\n• 18 km @ 5:25–5:35/km\n• 10 km @ 4:28–4:32/km (MP)\n• 4 km easy cool down",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-03-15",
+      "date": "2026-03-15",
+      "plannedActivity": "",
+      "actualDistance": "36.08",
+      "durationStr": "2:53:51",
+      "rpe": 5,
+      "feeling": "Good weather for a long run. I was wearing my pro4 and it was better than I expected, at the start I am slowly going 5:20 effort but it became 5min pace. I run until 20k to ramp up the pace since I had a friend running marathon at the same route. I have been waiting a bit and wait to take a photo of him, that's why the distance was longer, I wasn't meant to exceed 32k. The rpe should be 4 but this long run I follow my friend for a while and he is finishing with 240. I followed for around a k or 2 then I go back to my marathon pace. But it's good to run with a friend and took some photo with him. It makes this long run split into a few parts only,",
+      "coachFeedback": "Final long run before taper completed with stronger-than-planned pace. Intended 32 km progressed to 36 km due to waiting for and briefly running with a friend on the course. Pace naturally drifted faster early (around 5:00/km) despite aiming for 5:25–5:35, and the MP section was mixed with a short faster segment while following the friend finishing a 2:40 marathon. RPE slightly higher than planned (5 vs 4), but overall effort remained controlled. The run served as a good race simulation in the Adidas Adizero Adios Pro 4, confirming comfort and efficiency over long distance. Endurance felt solid and the run was mentally easier by breaking it into segments while meeting the friend on course."
+    },
+    {
+      "id": "2026-03-16",
+      "date": "2026-03-16",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-03-17",
+      "date": "2026-03-17",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-03-18",
+      "date": "2026-03-18",
+      "plannedActivity": "•\t3 km easy\n\t•\t5 km @ marathon pace (~4:30/km)\n\t•\t2 km easy",
+      "actualDistance": "3.47",
+      "durationStr": "17:50",
+      "rpe": 4,
+      "feeling": "The 5k was faster than I expected but I actually stop for a few times, I'm waiting at the light so I got some time to catch my breath. I am a bit tired though but maybe that's since I was not following the pace but faster. It was not too tired at the end but starting and in the middle for me I felt like keeping the pace at that would be a bit hard.",
+      "coachFeedback": "Short marathon-pace session during taper phase. The 5 km segment was run faster than planned at 4:22/km, partly due to inconsistent pacing and interruptions from traffic lights. Effort felt slightly harder than expected, especially early and mid-run, likely influenced by residual fatigue from the recent 36 km long run. Despite this, the session was completed without major struggle. Overall, a normal taper-phase workout where legs feel slightly heavy, but no negative signals."
+    },
+    {
+      "id": "2026-03-19",
+      "date": "2026-03-19",
+      "plannedActivity": "8–10 km easy",
+      "actualDistance": "8.39",
+      "durationStr": "45:18",
+      "rpe": 1,
+      "feeling": "Real easy run, go for dinner in the middle and continue",
+      "coachFeedback": "Solid easy run exactly as intended for this stage of the taper. The pace stayed comfortably within range and the overall effort was clearly low, which is the main goal right now. Stopping mid-run didn’t negatively impact the session—if anything, it reflects a relaxed mindset and low accumulated stress, both positive signs this close to race day. Legs are moving, fatigue is coming down, and there’s no indication of overreaching. Continue to keep runs easy and controlled, focusing on freshness rather than structure or performance."
+    },
+    {
+      "id": "2026-03-20",
+      "date": "2026-03-20",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-03-21",
+      "date": "2026-03-21",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-03-22",
+      "date": "2026-03-22",
+      "plannedActivity": "12–14 km easy",
+      "actualDistance": "12.75",
+      "durationStr": "1:03:42",
+      "rpe": 2,
+      "feeling": "Moved to Sunday since Saturday was busy. Stopped a few times as there was a race at my usual running route, I did raise my pace at last few km but not strictly around 430 but a bit slower. Ranging from 423 to 441, but I think this is a good tapering long run",
+      "coachFeedback": "Steady taper run with good overall control. Pace was slightly quicker than typical easy effort but remained comfortable and did not turn into a hard session. The faster closing kilometers provided a light marathon pace stimulus without adding fatigue, which is appropriate at this stage. Interruptions during the run did not impact the purpose of the session. Overall, this was an effective taper run that maintained rhythm while allowing continued recovery."
+    },
+    {
+      "id": "2026-03-23",
+      "date": "2026-03-23",
+      "plannedActivity": "6–8 km easy\nPace: ~5:20–5:40/km",
+      "actualDistance": "5.75",
+      "durationStr": "31:34",
+      "rpe": 1,
+      "feeling": "Easy run, cut short since hungry",
+      "coachFeedback": "Easy taper run executed within target pace range. Shortening the run due to hunger did not impact the purpose of the session, as overall intensity remained low and controlled. This continues to support recovery while maintaining movement during the taper phase. No concerns from this run, and overall progression toward race readiness remains on track."
+    },
+    {
+      "id": "2026-03-24",
+      "date": "2026-03-24",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-03-25",
+      "date": "2026-03-25",
+      "plannedActivity": "~7–9 km total\n\t•\t2 km easy\n\t•\t3–4 km @ MP (4:28–4:32/km)\n\t•\t1–2 km easy",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-03-26",
+      "date": "2026-03-26",
+      "plannedActivity": "5–6 km very easy + strides",
+      "actualDistance": "5.35",
+      "durationStr": "26:17",
+      "rpe": 3,
+      "feeling": "Chill jog and 2k mp as the modify program, I should be not going to full mp but chilling a bit. Overall a easy run just to get warm up before the race",
+      "coachFeedback": "Short taper session executed well with controlled effort throughout. The inclusion of a brief marathon pace segment served as a light neuromuscular reminder without introducing fatigue. Overall intensity remained appropriate for race week, and the run achieved its purpose of keeping the legs responsive while maintaining freshness. No concerns at this stage, and readiness for race day is on track."
+    },
+    {
+      "id": "2026-03-27",
+      "date": "2026-03-27",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-03-28",
+      "date": "2026-03-28",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-03-29",
+      "date": "2026-03-29",
+      "plannedActivity": "FUKUI MARATHON!",
+      "actualDistance": "42.25",
+      "durationStr": "3:18:34",
+      "rpe": 8,
+      "feeling": "I was very upset about this race. The first 30k was perfectly executed race. I managed to keep every km in 430 pace, you know there was even a Japanese came and thank me for such steady pace and he can follow quite comfortably. In the first 30k I was thinking I can do this forever, nothing would happen and I can do 310 since the execution was so perfect. But the temperatures creeps from 13 to 19 and the sun is directly shinning without any shades to us after 30k. I still felt ok on my breath but I felt a little cramp in my back of my calves. I said to myself it was normal and I had cramping every time I did a full marathon. This time was different, once a few steps there was another cramp, my pace dropped to 440 but I still felt I can managed it just add more at the end. But until one point the cramping was so strong that I cannot bend my legs anymore and I felt to the ground, there was instantly staff asking if I'm alright and helped me do massaging, it was better after that and I can run a little bit. But it was dropping to slow jog pace and the cramping still happens from time to time. I felt like I can do 310 this time since it was like a easy run for the first 30k, I still didn't felt very exhausted until the end, if my legs were better I can definitely perform better. Weather is a very crucial factor and luck was not ok my side this time. I felt so frustrated after this race since I've been preparing for so long, despite my injury I still kept my training.",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-03-30",
+      "date": "2026-03-30",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-03-31",
+      "date": "2026-03-31",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-04-01",
+      "date": "2026-04-01",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-04-02",
+      "date": "2026-04-02",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-04-03",
+      "date": "2026-04-03",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-04-04",
+      "date": "2026-04-04",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    },
+    {
+      "id": "2026-04-05",
+      "date": "2026-04-05",
+      "plannedActivity": "",
+      "actualDistance": "",
+      "durationStr": "",
+      "rpe": 5,
+      "feeling": "",
+      "coachFeedback": ""
+    }
+  ]
+}
