@@ -6,7 +6,7 @@ services:
     build: .
     image: wewerew/marathon-tracker
     ports:
-      - "8080:80" # Change 8080 to whatever port you want to access the app on
+      - "8080:80"
     environment:
       - VITE_FIREBASE_API_KEY
       - VITE_FIREBASE_AUTH_DOMAIN
